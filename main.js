@@ -289,16 +289,11 @@ document.addEventListener("DOMContentLoaded", function ()
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
 		for (var i = 0; i < doneTodos.length; i++) {
 			doneTodos[i].remove();
-		}
-		var item;
-		for (var i = 0; i <= localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem("todo"+[i]));
 				if (item.todoState == "done" ) {
 					deletelocal(i);
-					item.todoState = "current"
-				}
+					item.todoState = "current" }
 					}
-
 		display_clear();
 		display_footer()
 	}
