@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function ()
 				if (item.todoState == "done" )
 					deletelocal(i);
 					}
-		}
+
 		display_clear();
 		display_footer()
 	}
