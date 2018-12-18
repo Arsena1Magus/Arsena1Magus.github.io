@@ -287,6 +287,7 @@ document.addEventListener("DOMContentLoaded", function ()
 	clear.onclick = function ()
 	{
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
+		var item;
 		for (var i = 0; i < doneTodos.length; i++) {
 			doneTodos[i].remove();
 			item = JSON.parse(localStorage.getItem("todo"+[i]));
