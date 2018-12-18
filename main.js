@@ -80,6 +80,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		{
 			case 'done':
 				item.classList.add('app__list-item', 'app__list-item--done');
+				done.classList.toggle('toggle');
 				done.classList.toggle('toggle--done');
 				break;
 			default:
