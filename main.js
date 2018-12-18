@@ -178,12 +178,14 @@ document.addEventListener("DOMContentLoaded", function ()
 		{
 			for (var i = 0; i < todos.length; i++)
 			{
+				if (document.querySelector('.toggle')){
 				todos[i].classList.add('app__list-item--done');
 				document.querySelector('.toggle').classList.add('toggle--done');
 				document.querySelector('.toggle').classList.remove('toggle');
 				item = JSON.parse(localStorage.getItem("todo"+[i]));
 				item.todoState = "done";
 				localStorage.setItem('todo'+ [i], JSON.stringify(item));
+			}
 				display_clear();
 			}
 		}
@@ -191,12 +193,14 @@ document.addEventListener("DOMContentLoaded", function ()
 		{
 			for (var i = 0; i < todos.length; i++)
 			{
+				if(document.querySelector('.toggle--done')){
 				todos[i].classList.remove('app__list-item--done');
 				document.querySelector('.toggle--done').classList.add('toggle');
 				document.querySelector('.toggle--done').classList.remove('toggle--done');
 				item = JSON.parse(localStorage.getItem("todo"+[i]));
 				item.todoState = "current";
 				localStorage.setItem('todo'+ [i], JSON.stringify(item));
+			}
 				display_clear();
 			}
 		}
