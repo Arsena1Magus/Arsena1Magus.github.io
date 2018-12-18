@@ -141,11 +141,11 @@ document.addEventListener("DOMContentLoaded", function ()
 		for (i=i; i < localStorage.length; i++)
 		{
 			j=i+1;
-			if(j < localStorage.length) {
+			if(j <= localStorage.length) {
 			item = JSON.parse(localStorage.getItem('todo'+ [j]));
 			localStorage.setItem('todo'+ [i], JSON.stringify(item));
 		}
-		//	else localStorage.removeItem('todo'+[j]);
+			else localStorage.removeItem('todo'+[j]);
 		}
 	}
 
