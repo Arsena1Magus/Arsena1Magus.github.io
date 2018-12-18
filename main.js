@@ -277,7 +277,6 @@ document.addEventListener("DOMContentLoaded", function ()
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
 		for (var i = 0; i < doneTodos.length; i++) {
 			doneTodos[i].remove();
-			deletelocal(i);
 		}
 		display_clear();
 		display_footer()
