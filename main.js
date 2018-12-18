@@ -290,12 +290,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		var item;
 		for (var i = 0; i < doneTodos.length; i++) {
 			doneTodos[i].remove();
-			item = JSON.parse(localStorage.getItem("todo"+[i]));
-				if (item.todoState == "done" ) {
-					deletelocal(i);
-					item.todoState = "current"
-				} else continue;
-					}
+		}
 		display_clear();
 		display_footer()
 	}
