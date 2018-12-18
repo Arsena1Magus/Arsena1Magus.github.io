@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		for (var i = 0; i < doneTodos.length; i++) {
 			doneTodos[i].remove();
 
-			for (i=i; i < localStorage.length; i++)
+			for (k=i; i < localStorage.length; k++)
 			{
 				j=i+1;
 				if(j <= localStorage.length) {
