@@ -138,6 +138,10 @@ document.addEventListener("DOMContentLoaded", function ()
 				break;
 			}
 		}
+		deletelocal(i);
+	}
+
+	function deletelocal(i) {
 		for (i=i; i < localStorage.length; i++)
 		{
 			j=i+1;
@@ -273,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
 		for (var i = 0; i < doneTodos.length; i++) {
 			doneTodos[i].remove();
-		//	localStorage.removeItem('todo');
+			deletelocal(i);
 		}
 		display_clear();
 		display_footer()
