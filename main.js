@@ -293,9 +293,10 @@ document.addEventListener("DOMContentLoaded", function ()
 		var item;
 		for (var i = 0; i <= localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem("todo"+[i]));
-				if (item.todoState == "done" )
+				if (item.todoState == "done" ) {
 					deletelocal(i);
-					item.todoState = "current";
+					item.todoState = "current"
+				}
 					}
 
 		display_clear();
