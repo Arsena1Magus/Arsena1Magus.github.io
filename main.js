@@ -293,7 +293,8 @@ document.addEventListener("DOMContentLoaded", function ()
 			item = JSON.parse(localStorage.getItem("todo"+[i]));
 				if (item.todoState == "done" ) {
 					deletelocal(i);
-					item.todoState = "current" }
+					item.todoState = "current"
+				} else continue;
 					}
 		display_clear();
 		display_footer()
