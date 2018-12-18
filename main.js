@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		{
 			for (var i = 0; i < todos.length; i++)
 			{
-				todos[i].classList.add('app__list-item--done');
+				todos.classList.add('app__list-item--done');
 				toggle.classList.add('toggle--done');
 				toggle.classList.remove('toggle');
 				item = JSON.parse(localStorage.getItem("todo"+[i]));
