@@ -174,13 +174,14 @@ document.addEventListener("DOMContentLoaded", function ()
 	{
 		var item;
 		var todos = document.querySelectorAll('.app__list-item');
+		var toogle = document.querySelector('.toggle');
 		if (alldone.checked == true)
 		{
 			for (var i = 0; i < todos.length; i++)
 			{
 				todos[i].classList.add('app__list-item--done');
-				document.querySelector('.toggle').classList.add('toggle--done');
-				document.querySelector('.toggle').classList.remove('toggle');
+				toggle.classList.add('toggle--done');
+				toggle.classList.remove('toggle');
 				item = JSON.parse(localStorage.getItem("todo"+[i]));
 				item.todoState = "done";
 				localStorage.setItem('todo'+ [i], JSON.stringify(item));
