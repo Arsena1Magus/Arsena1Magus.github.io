@@ -1,0 +1,370 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+aside, footer, header, section {
+   display: block;
+}
+
+.body {
+  background: #f5f5f5;
+  color: #4d4d4d;
+  margin: 0 auto;
+  font: 14px 'HelveticaNeue', Helvetica, Arial, sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #b83f45;
+}
+
+h3 {
+  display: block;
+}
+
+hr {
+  margin: 20px 0;
+  border: 0;
+  border-top: 1px dashed #c5c5c5;
+}
+
+li {
+  list-style: none;
+}
+
+.body > .learn {
+  display: absolute;
+  width: 272px;
+  height: 436px;
+  margin-top: 8px;
+  margin-left: 8px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, .6);
+  color: #000;
+}
+
+.learn span {
+  display: block;
+}
+
+.learn h3 {
+  font-size: 24px;
+  margin: 12px 0;
+  font-weight: lighter;
+}
+
+.learn h5 {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+.quote p {
+  font-size: 14.8px;
+  font-style: italic;
+  background: rgba(0, 0, 0, .04);
+  border-radius: 5px;
+  padding: 11px;
+  line-height: 19px;
+}
+
+.quote footer  {
+  margin: 15px 0 15px 205px;
+}
+
+.learn footer {
+  line-height: 18px;
+}
+
+.todoapp {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  margin: -335px 0 0 43.5vw;
+  width: 550px;
+  height: 65px;
+}
+
+
+.todoapp h1 {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top:-120px;
+  font-size: 100px;
+  color: rgba(175, 47, 47, 0.15);
+  font-weight: lighter;
+}
+
+.todoapp #in {
+  position: relative;
+  width: 475px;
+  height: 34px;
+  padding: 16px 16px 16px 60px;
+  border: none;
+  background: rgba(0, 0, 0, 0.003);
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0.03);
+  font-size: 24px;
+  outline:none;
+}
+
+.todoapp #in::placeholder {
+  color:#E8E8E8;
+  font-size: 24px;
+  font-style: italic;
+}
+
+.todoapp .main .app__list {
+  display: block;
+  position: relative;
+  margin-top: -1px;
+}
+
+.toggle-all {
+  width: 1px;
+  height: 1px;
+  border: none;
+  opacity: 0;
+  position: absolute;
+  right: 100%;
+  bottom: 100%;
+}
+
+.toggle-all + label {
+  width: 60px;
+  height: 34px;
+  font-size: 0;
+  position: absolute;
+  top: 15px;
+  left: -7px;
+  transform: rotate(90deg);
+}
+
+.toggle-all + label::before {
+  content: '❯';
+  font-size: 22px;
+  color: #e6e6e6;
+  padding: 10px 27px 10px 27px;
+}
+
+.toggle-all:checked + label::before {
+  color: #737373;
+}
+
+.todoapp .main .app__list .app__list-item {
+  display: block;
+  position: relative;
+  width: 550px;
+  height: 58px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-top: 1px solid #e6e6e6;
+}
+
+.app__list-input {
+  display: block;
+  position: absolute;
+  width: 500px;
+  height: 54px;
+  margin-left: 45px;
+  margin-top: -58px;
+  font-size: 24px;
+  z-index: 1;
+}
+
+.app__list-item--done {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
+
+.app__list-text {
+  padding: 15px 15px 15px 60px;
+  display: block;
+  line-height: 1.2;
+  transition: color 0.4s;
+  font-size: 24px;
+}
+
+.toggle {
+  display: block;
+  position: relative;
+  width: 28.5px;
+  height: 28.5px;
+  float: left;
+  margin-left: 8px;
+  margin-top: 15px;
+  border: 1px #E8E8E8 solid;
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.toggle--done {
+  display: block;
+  position: relative;
+  width: 35px;
+  height: 35px;
+  float: left;
+  margin-left: 3px;
+  margin-top: 13px;
+  background-image: url("Img/done.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto;
+  z-index: 2;
+}
+
+.app__list-remove {
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+  margin-top: 30px;
+  left: 500px;
+  transition: all linear 0.3s;
+  opacity: 0;
+}
+
+.app__list-item:hover .app__list-remove {
+  opacity: 0.5;
+}
+
+.app__list-item:hover .app__list-remove:hover {
+    opacity: 1;
+  }
+
+.app__list-remove:before, .app__list-remove:after {
+  content: "";
+  background-color: #cc9a9a;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.app__list-remove:before {
+  height: 3px;
+  width: 15px;
+}
+
+.app__list-remove:after {
+  height: 15px;
+  width: 3px;
+}
+
+.info {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: #bfbfbf;
+  font-size: 10px;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  margin-left: 0;
+  margin-top: 12%;
+}
+
+.info p {
+  line-height: 19px;
+}
+
+.info a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer {
+  display: none;
+  position: relative;
+  width: 520px;
+  height: 20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  background: #fff;
+  padding: 10px 15px;
+  border-top: 1px solid #e6e6e6;
+  color: #777;
+}
+
+.footer::before {
+  content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    overflow: hidden;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2),
+     0 8px 0 -3px #f6f6f6,
+     0 9px 1px -3px rgba(0, 0, 0, 0.2),
+     0 16px 0 -6px #f6f6f6,
+     0 17px 2px -6px rgba(0, 0, 0, 0.2);
+}
+
+.clear-completed {
+  display: none;
+  position: relative;
+  float: right;
+}
+
+.clear-completed a {
+    color:#777;
+}
+
+.clear-completed a:hover {
+  text-decoration: underline;
+}
+
+.js-current-todos {
+  display: block;
+  position: relative;
+  float: left;
+  text-align: none;
+  width: 10px;
+  height: 5px;
+}
+
+.filters {
+  text-align: center;
+}
+
+.filters li {
+    border: 1px solid transparent;
+    border-radius: 3px;
+}
+
+.filters li a:hover {
+  border-color: rgba(175, 47, 47, 0.1);
+}
+
+.filters li .selected {
+  border-color: rgba(175, 47, 47, 0.2);
+}
+
+.todo-count {
+  float: left;
+  text-align: left;
+}
+
+.filters {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
+.filters li {
+  display: inline;
+}
+
+.filters li a {
+  color: inherit;
+  margin: 3px;
+  padding: 3px 7px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: 3px;
+}

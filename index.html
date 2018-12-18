@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>VanillaJS • TodoMVC</title>
+		<link  type="text/css"  rel= "stylesheet" href="main.css" />
+		<script src="main.js"></script>
+	</head>
+	<body class="body">
+		<aside class="learn">
+			<header>
+				<h3>JavaScript</h3>
+				<span>
+					<h5>Vanilla JavaScript Example</h5>
+					<a href="https://github.com/tastejs/todomvc/tree/gh-pages/examples/vanillajs">Source</a>
+				</span>
+			</header>
+			<hr>
+			<blockquote class="quote">
+				<p>JavaScript® (often shortened to JS) is a lightweight, interpreted, object-oriented language with first-class functions, most known as the scripting language for Web pages, but used in many non-browser environments as well such as node.js or Apache CouchDB.</p>
+				<footer><a href="http://developer.mozilla.org/en-US/docs/JavaScript">JavaScript</a></footer>
+			</blockquote>
+			<hr>
+			<footer>
+				<em>If you have other helpful links to share, or find any of the links above no longer work, please <a href="https://github.com/tastejs/todomvc/issues">let us know</a></em>
+			</footer>
+		</aside>
+		<section class="todoapp">
+			<header>
+				<h1>todos</h1>
+				<input id="in" type="text" placeholder="What needs to be done?" autofocus>
+			</header>
+			<section class="main">
+				<input id="toggle-all" class="toggle-all" type="checkbox">
+				<label class="alldone" for="toggle-all"></label>
+				<ul class="app__list" id="app__list"></ul>
+			</section>
+			<div class="footer">
+				<span class="js-current-todos" id="js-current-todos"></span>
+				<span class="todo-count"></span>
+				<ul class="filters">
+					<li><a href="#/" class = "all">All</a></li>
+					<li><a href="#/" class = "active">Active</a></li>
+					<li><a href="#/" class = "completed">Completed</a></li>
+				</ul>
+				<div class="clear-completed"><a href="#">Clear completed</a></div>
+			</div>
+			<footer class="info">
+				<p>Double-click to edit a todo</p>
+				<p>Created by <a href="http://twitter.com/oscargodson">Oscar Godson</a></p>
+				<p>Refactored by <a href="https://github.com/cburgmer">Christoph Burgmer</a></p>
+				<p>Part of <a href="http://todomvc.com">TodoMVC</a></p>
+			</footer>
+		</section>
+	</body>
+</html>
