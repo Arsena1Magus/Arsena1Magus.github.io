@@ -174,18 +174,16 @@ document.addEventListener("DOMContentLoaded", function ()
 	{
 		var item;
 		var todos = document.querySelectorAll('.app__list-item');
-		var toogle = document.querySelectorAll('.toggle');
-		var toogledone = document.querySelectorAll('.toggle--done');
 		if (alldone.checked == true)
 		{
 			for (var i = 0; i < todos.length; i++)
 			{
-				todos[i].classList.add('app__list-item--done');
-				toggle[i].classList.add('toggle--done');
-				toggle[i].classList.remove('toggle');
+				document.querySelector('.toggle').classList.add('toggle--done');
+				document.querySelector('.toggle').classList.remove('toggle');
 				item = JSON.parse(localStorage.getItem("todo"+[i]));
 				item.todoState = "done";
 				localStorage.setItem('todo'+ [i], JSON.stringify(item));
+				todos[i].classList.add('app__list-item--done');
 				display_clear();
 			}
 		}
@@ -193,12 +191,12 @@ document.addEventListener("DOMContentLoaded", function ()
 		{
 			for (var i = 0; i < todos.length; i++)
 			{
-				todos[i].classList.remove('app__list-item--done');
-				toggledone[i].classList.remove('toggle--done');
-				toggledone[i].classList.add('toggle');
+				document.querySelector('.toggle--done').classList.add('toggle');
+				document.querySelector('.toggle--done').classList.remove('toggle--done');
 				item = JSON.parse(localStorage.getItem("todo"+[i]));
 				item.todoState = "current";
 				localStorage.setItem('todo'+ [i], JSON.stringify(item));
+				todos[i].classList.remove('app__list-item--done');
 				display_clear();
 			}
 		}
