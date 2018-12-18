@@ -171,6 +171,7 @@ document.addEventListener("DOMContentLoaded", function ()
 	var alldone = document.querySelector('.toggle-all');
 	alldone.onclick = function ()
 	{
+		var item;
 		var todos = document.querySelectorAll('.app__list-item');
 		if (alldone.checked == true)
 		{
@@ -178,6 +179,9 @@ document.addEventListener("DOMContentLoaded", function ()
 			{
 				document.querySelector('.toggle').classList.add('toggle--done');
 				document.querySelector('.toggle').classList.remove('toggle');
+				item = JSON.parse(localStorage.getItem("todo"+[i]));
+				item.todoState = "done";
+				localStorage.setItem('todo'+ [i], JSON.stringify(item));
 				todos[i].classList.add('app__list-item--done');
 				display_clear();
 			}
@@ -188,6 +192,9 @@ document.addEventListener("DOMContentLoaded", function ()
 			{
 				document.querySelector('.toggle--done').classList.add('toggle');
 				document.querySelector('.toggle--done').classList.remove('toggle--done');
+				item = JSON.parse(localStorage.getItem("todo"+[i]));
+				item.todoState = "current";
+				localStorage.setItem('todo'+ [i], JSON.stringify(item));
 				todos[i].classList.remove('app__list-item--done');
 				display_clear();
 			}
