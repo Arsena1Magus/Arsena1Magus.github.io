@@ -139,16 +139,10 @@ document.addEventListener("DOMContentLoaded", function ()
 				break;
 			}
 		}
-		j=i;
-		for (i=i; i < localStorage.length; i++) {
+		for (j=i,i=i+1; i <= localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
-			if(item != null) {
 			localStorage.setItem('todo' + [j],JSON.stringify(item));
-			j++;
 		}
-		}
-		i--;
-		localStorage.removeItem('todo'+[i]);
 	}
 
 
