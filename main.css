@@ -4,7 +4,7 @@
   padding: 0;
 }
 
-aside, footer, header, section {
+footer, header, section {
    display: block;
 }
 
@@ -34,48 +34,6 @@ hr {
 
 li {
   list-style: none;
-}
-
-.learn {
-  position: absolute;
-  width: 272px;
-  top: 8px;
-  padding: 10px;
-  border-radius: 5px;
-  background-color: rgba(255, 255, 255, .6);
-  color: #000;
-}
-
-.learn span {
-  display: block;
-}
-
-.learn h3 {
-  font-size: 24px;
-  margin: 12px 0;
-  font-weight: lighter;
-}
-
-.learn h5 {
-  font-size: 14px;
-  font-weight: lighter;
-}
-
-.quote p {
-  font-size: 14.8px;
-  font-style: italic;
-  background: rgba(0, 0, 0, .04);
-  border-radius: 5px;
-  padding: 11px;
-  line-height: 19px;
-}
-
-.quote footer  {
-  margin: 15px 0 15px 205px;
-}
-
-.learn footer {
-  line-height: 18px;
 }
 
 .todoapp {
@@ -372,8 +330,4 @@ li {
 .body {
   width: auto;
   padding-left: 300px;
-}
-
-.body > .learn {
-  left: 8px;
 }
