@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", function ()
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 			localStorage.setItem('todo' + [j],JSON.stringify(item));
 		}
-		i--;
+		i=i-2;
 		localStorage.removeItem('todo'+[i]);
 	}
 
