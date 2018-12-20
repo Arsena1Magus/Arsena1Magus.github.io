@@ -8,7 +8,9 @@ footer, header, section {
    display: block;
 }
 
-body {
+
+.body {
+  width: auto;
   min-width: 230px;
   max-width: 550px;
   margin: 0 auto;
@@ -16,6 +18,8 @@ body {
   background: #f5f5f5;
   color: #4d4d4d;
 }
+
+
 
 a {
   text-decoration: none;
@@ -324,10 +328,4 @@ li {
   text-decoration: none;
   border: 1px solid transparent;
   border-radius: 3px;
-}
-
-
-.body {
-  width: auto;
-  padding-left: 300px;
 }
