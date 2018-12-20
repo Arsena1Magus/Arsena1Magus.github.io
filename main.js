@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function ()
 
 		function todosload() {
 			var el;
-			for(var i = 0; i <= localStorage.length; i++) {
+			for(var i = 0; i < localStorage.length; i++) {
 				if (localStorage.getItem("todo"+[i])) {
 					el = JSON.parse(localStorage.getItem("todo"+[i]));
 					todos.push(el);
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		currentTodos();
 		display_clear();
 		var item;
-		for (var i = 0; i <= localStorage.length; i++) {
+		for (var i = 0; i < localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem("todo"+[i]));
 				if (elemId == item.todoId)
 					if(item.todoState == "current") {
@@ -132,29 +132,23 @@ document.addEventListener("DOMContentLoaded", function ()
 		display_footer();
 		var item;
 		var i,j;
-		for (i = 0; i <= localStorage.length; i++) {
+		for (i = 0; i < localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 			if (removeElId == item.todoId){
 				localStorage.removeItem('todo'+[i]);
 				break;
 			}
 		}
-		deletelocal(i);
-	}
-
-	function deletelocal(i) {
-		for (i=i; i < localStorage.length; i++)
-		{
-			j=i+1;
-			if(j <= localStorage.length) {
-				if (j == localStorage.length) {
-			item = JSON.parse(localStorage.getItem('todo'+ [j]));
-			localStorage.setItem('todo'+ [i], JSON.stringify(item));
-			i--;
-		} else localStorage.removeItem('todo'+[j]);
-			}
+		j=i;
+		i++;
+		for (i=i; i < localStorage.length; i++) {
+			item = JSON.parse(localStorage.getItem('todo'+ [i]));
+			localStorage.setItem('todo' + [j],JSON.stringify(item));
+			j++;
 		}
 	}
+
+
 
 	function currentTodos()
 	{
