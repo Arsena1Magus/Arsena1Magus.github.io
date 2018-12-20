@@ -368,7 +368,7 @@ li {
   border-radius: 3px;
 }
 
-@media (min-width: 899px) {
+
 .body {
   width: auto;
   padding-left: 300px;
@@ -376,6 +376,4 @@ li {
 
 .body > .learn {
   left: 8px;
-}
-
 }
