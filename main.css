@@ -34,8 +34,9 @@ li {
   list-style: none;
 }
 
-.body > .learn {
-  display: absolute;
+.learn {
+  display: block;
+  position: absolute;
   width: 272px;
   height: 436px;
   margin-top: 8px;
