@@ -87,7 +87,6 @@ li {
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
 
-
 .todoapp h1 {
   position: absolute;
   text-align: center;
@@ -369,7 +368,6 @@ li {
   border-radius: 3px;
 }
 
-@media (min-width: 899px) {
 .body {
   width: auto;
   padding-left: 300px;
@@ -377,6 +375,4 @@ li {
 
 .body > .learn {
   left: 8px;
-}
-
 }
