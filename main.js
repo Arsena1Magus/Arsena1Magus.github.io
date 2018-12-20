@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function ()
 			}
 		}
 		j=i;
-		for (i=i; i < localStorage.length; i++) {
+		for (i=i; i < localStorage.length+1; i++) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 			if(item != null) {
 			localStorage.setItem('todo' + [j],JSON.stringify(item));
