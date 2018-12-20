@@ -9,18 +9,12 @@ aside, footer, header, section {
 }
 
 body {
-  display: block;
   min-width: 230px;
   max-width: 550px;
   margin: 0 auto;
   font: 14px 'HelveticaNeue', Helvetica, Arial, sans-serif;
   background: #f5f5f5;
   color: #4d4d4d;
-}
-
-.body {
-  width: auto;
-  padding-left: 300px;
 }
 
 a {
@@ -43,12 +37,9 @@ li {
 }
 
 .learn {
-  display: block;
-  position: relative;
+  position: absolute;
   width: 272px;
-  height: 436px;
-  margin-top: 8px;
-  margin-left: 8px;
+  top: 8px;
   padding: 10px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, .6);
@@ -88,12 +79,8 @@ li {
 }
 
 .todoapp {
-  display: block;
   position: relative;
-  width: 550px;
-  height: 65px;
-  margin-top: -330px;
-  margin-left: 45vw;
+  margin: 130px 0 40px 0;
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
 }
@@ -378,4 +365,16 @@ li {
   text-decoration: none;
   border: 1px solid transparent;
   border-radius: 3px;
+}
+
+@media (min-width: 899px) {
+.body {
+  width: auto;
+  padding-left: 300px;
+}
+
+.body > .learn {
+  left: 8px;
+}
+
 }
