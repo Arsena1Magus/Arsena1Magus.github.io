@@ -281,11 +281,25 @@ document.addEventListener("DOMContentLoaded", function ()
 	{
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
 		var item;
-		for (var i = 0; i <= doneTodos.length; i++) {
+		var i,j,k;
+		for (i = 0; i <= doneTodos.length; i++) {
 			doneTodos[i].remove();
 		}
 		display_clear();
 		display_footer()
+		for (i = 0; i < localStorage.length; i++) {
+			item = JSON.parse(localStorage.getItem('todo'+ [i]));
+			if (item.todoState == "done"){
+				localStorage.removeItem('todo'+[i]);
+				k=i;
+				for (j=k,k=k+1; k <= localStorage.length; k++, j++) {
+					item = JSON.parse(localStorage.getItem('todo'+ [k]));
+					localStorage.setItem('todo' + [j],JSON.stringify(item));
+				}
+				k=k-2;
+				localStorage.removeItem('todo'+[k]);
+			}
+		}
 	}
 
 
