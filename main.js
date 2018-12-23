@@ -282,7 +282,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
 		var item;
 		var i,j,k;
-		for (i = 0; i <= doneTodos.length; i++) {
+		for (i = 0; i < doneTodos.length; i++) {
 			doneTodos[i].remove();
 		}
 		display_clear();
