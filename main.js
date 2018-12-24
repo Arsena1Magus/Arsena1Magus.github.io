@@ -289,14 +289,13 @@ document.addEventListener("DOMContentLoaded", function ()
 		for (i = 0; i < localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 			if (item.todoState == "done"){
-				localStorage.removeItem('todo'+[i]);
-				k=i;
-				for (j=k,k=k+1; k <= localStorage.length; k++, j++) {
-					item = JSON.parse(localStorage.getItem('todo'+ [k]));
-					localStorage.setItem('todo' + [j],JSON.stringify(item));
-				}
-				k=k-2;
-				localStorage.removeItem('todo'+[k]);
+				for (j=i+1; j < localStorage.length; j++, i++){
+					item = JSON.parse(localStorage.getItem('todo'+ [j]));
+					localStorage.setItem('todo'+ [i], JSON.stringify(item));
+			}
+			}
+		}
+			localStorage.removeItem('todo'+[i]);
 			}
 		}
 	}
