@@ -289,7 +289,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		for (i = 0; i < localStorage.length; i++){
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 			if (item.todoState == "done"){
-				for (j=i+1; j < localStorage.length; j++, i++){
+				for (j=i+1; j <= localStorage.length; j++, i++){
 					item = JSON.parse(localStorage.getItem('todo'+ [j]));
 					localStorage.setItem('todo'+ [i], JSON.stringify(item));
 				}
