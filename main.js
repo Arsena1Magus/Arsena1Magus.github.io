@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", function ()
 			}
 		}
 		i=i-1;
-		var k=i-1;
+		var k=i-2;
 		var item1 =JSON.parse(localStorage.getItem('todo'+ [i]));
 		var item2 =JSON.parse(localStorage.getItem('todo'+ [k]))
 		if (item1 == item2)
