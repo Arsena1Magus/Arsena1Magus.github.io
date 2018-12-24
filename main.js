@@ -145,6 +145,8 @@ document.addEventListener("DOMContentLoaded", function ()
 		}
 		i=i-1;
 		localStorage.removeItem('todo'+[i]);
+		i++;
+		localStorage.removeItem('todo'+[i]);
 	}
 
 
