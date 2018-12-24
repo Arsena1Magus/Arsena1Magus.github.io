@@ -290,13 +290,14 @@ document.addEventListener("DOMContentLoaded", function ()
 						item = JSON.parse(localStorage.getItem('todo'+ [k]));
 						localStorage.setItem('todo'+ [j], JSON.stringify(item));
 					}
+					localStorage.removeItem('todo'+[j]);
 					break;
 				}
 			}
 		}
 		display_clear();
 		display_footer()
-	//	localStorage.removeItem('todo'+[j]);
+		localStorage.removeItem('todo'+[j]);
 		}
 
 
