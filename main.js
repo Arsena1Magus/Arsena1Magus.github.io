@@ -297,7 +297,6 @@ document.addEventListener("DOMContentLoaded", function ()
 		}
 		display_clear();
 		display_footer()
-		//localStorage.removeItem('todo'+[j]);
 		}
 
 
