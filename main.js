@@ -149,7 +149,9 @@ document.addEventListener("DOMContentLoaded", function ()
 		}
 		i--;
 		var k=i-1;
-		if (JSON.parse(localStorage.getItem('todo'+ [i])) == JSON.parse(localStorage.getItem('todo'+ [k])))
+		var item1 =JSON.parse(localStorage.getItem('todo'+ [i]));
+		var item2 =JSON.parse(localStorage.getItem('todo'+ [k]))
+		if (item1 == item2)
 		localStorage.removeItem('todo'+[i]);
 	}
 
