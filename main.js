@@ -141,12 +141,12 @@ document.addEventListener("DOMContentLoaded", function ()
 		}
 		for (i=0, j=0; j < localStorage.length; )
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
-			if(item != null) {
+			if(item == null) i++;
+			else {
 				localStorage.setItem('todo' + [j],JSON.stringify(item));
 				i++;
 				j++
-			}
-			else i++;
+			}	
 
 	/*	for (j=i,i=i+1; i < localStorage.length; i++, j++) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
