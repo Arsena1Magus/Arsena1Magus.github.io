@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		for (i = 0; i < localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 			if (removeElId == item.todoId){
-				for (j=i+1; j < localStorage; j++, i++){
+				for (j=i+1; j <= localStorage.length; j++, i++){
 					item = JSON.parse(localStorage.getItem('todo'+ [j]));
 					localStorage.setItem('todo'+ [i], JSON.stringify(item));
 			}
