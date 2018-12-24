@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", function ()
 				break;
 			}
 		}
-		for (i=0, j=0; i < localStorage.length; i++ ) {
+		for (i=0, j=0; i <= localStorage.length; i++ ) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 			if(item == null) continue;
 			else {
