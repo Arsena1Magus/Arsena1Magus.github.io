@@ -293,12 +293,12 @@ document.addEventListener("DOMContentLoaded", function ()
 					item = JSON.parse(localStorage.getItem('todo'+ [j]));
 					localStorage.setItem('todo'+ [i], JSON.stringify(item));
 			}
+	
 			}
 		}
 			localStorage.removeItem('todo'+[i]);
 			}
-		}
-	}
+
 
 
 		document.querySelector(".app__list").addEventListener("dblclick", function(event) {
