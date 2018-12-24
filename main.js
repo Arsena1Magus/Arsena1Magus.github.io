@@ -148,7 +148,8 @@ document.addEventListener("DOMContentLoaded", function ()
 			}
 		}
 		i--;
-		if (JSON.parse(localStorage.getItem('todo'+ [i])) == JSON.parse(localStorage.getItem('todo'+ [i-1])))
+		var k=i-1;
+		if (JSON.parse(localStorage.getItem('todo'+ [i])) == JSON.parse(localStorage.getItem('todo'+ [k])))
 		localStorage.removeItem('todo'+[i]);
 	}
 
