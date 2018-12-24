@@ -135,25 +135,14 @@ document.addEventListener("DOMContentLoaded", function ()
 		for (i = 0; i < localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 			if (removeElId == item.todoId){
-				localStorage.removeItem('todo'+[i]);
-				break;
+				for (j=i+1; j < localStorage; j++, i++){
+					item = JSON.parse(localStorage.getItem('todo'+ [j]));
+					localStorage.setItem('todo'+ [i], JSON.stringify(item));
+			}
 			}
 		}
-		for (i=0, j=0; i <= localStorage.length; i++ ) {
-			item = JSON.parse(localStorage.getItem('todo'+ [i]));
-			if(item == null) continue;
-			else {
-				localStorage.setItem('todo' + [j],JSON.stringify(item));
-				j++
-			}
-		}
-		i=i-1;
-		var k=i-2;
-		var item1 =JSON.parse(localStorage.getItem('todo'+ [i]));
-		var item2 =JSON.parse(localStorage.getItem('todo'+ [k]))
-		if (item1 == item2)
-		localStorage.removeItem('todo'+[i]);
 	}
+
 
 
 
