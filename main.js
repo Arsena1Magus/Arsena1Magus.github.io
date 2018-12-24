@@ -283,20 +283,22 @@ document.addEventListener("DOMContentLoaded", function ()
 		var i,j,k;
 		for (i = 0; i < doneTodos.length; i++) {
 			doneTodos[i].remove();
-		}
-		display_clear();
-		display_footer()
-		for (i = 0; i < localStorage.length; i++){
-			item = JSON.parse(localStorage.getItem('todo'+ [i]));
-			if (item.todoState == "done"){
-				for (j=i+1; j <= localStorage.length; j++, i++){
-					item = JSON.parse(localStorage.getItem('todo'+ [j]));
-					localStorage.setItem('todo'+ [i], JSON.stringify(item));
+			for (j = 0; j < localStorage.length; j++){
+				item = JSON.parse(localStorage.getItem('todo'+ [j]));
+				if (item.todoState == "done"){
+					for (k=j+1; k < localStorage.length; j++, k++){
+						item = JSON.parse(localStorage.getItem('todo'+ [k]));
+						localStorage.setItem('todo'+ [j], JSON.stringify(item));
+					}
+					break;
 				}
 			}
 		}
-			localStorage.removeItem('todo'+[i]);
-			}
+		display_clear();
+		display_footer()
+
+			localStorage.removeItem('todo'+[j]);
+		}
 
 
 
