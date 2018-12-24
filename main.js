@@ -139,14 +139,23 @@ document.addEventListener("DOMContentLoaded", function ()
 				break;
 			}
 		}
-		for (j=i,i=i+1; i < localStorage.length; i++, j++) {
+		for (i=0, j=0; j < localStorage.length; )
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
-			localStorage.setItem('todo' + [j],JSON.stringify(item));
+			if(item != null) {
+				item = JSON.parse(localStorage.getItem('todo'+ [i]));
+				i++;
+				j++
+			}
+			else i++;
+
+	/*	for (j=i,i=i+1; i < localStorage.length; i++, j++) {
+			item = JSON.parse(localStorage.getItem('todo'+ [i]));
+			item = JSON.parse(localStorage.getItem('todo'+ [i]));
 		}
 		i=i-1;
 		localStorage.removeItem('todo'+[i]);
 		i++;
-		localStorage.removeItem('todo'+[i]);
+		localStorage.removeItem('todo'+[i]); */
 	}
 
 
