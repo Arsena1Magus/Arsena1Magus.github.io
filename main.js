@@ -239,10 +239,10 @@ document.addEventListener("DOMContentLoaded", function ()
 		activeBtn.classList.remove('selected');
 		completedBtn.classList.add('selected');
 		var todos = document.querySelectorAll('.app__list-item');
-		for (var i = 0; i < todos.length; i++)
+	/*	for (var i = 0; i < todos.length; i++)
 		{
 			todos[i].style.display = "block";
-		}
+		} */
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
 		for (var i = 0; i <= todos.length; i++)
 			todos[i].style.display = "none";
