@@ -208,7 +208,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		activeBtn.classList.remove('selected');
 		completedBtn.classList.remove('selected');
 		var todos = document.querySelectorAll('.app__list-item');
-		for (var i = 0; i <= todos.length; i++)
+		for (var i = 0; i < todos.length; i++)
 		{
 			todos[i].style.display = "block";
 		}
@@ -221,12 +221,12 @@ document.addEventListener("DOMContentLoaded", function ()
 		activeBtn.classList.add('selected');
 		completedBtn.classList.remove('selected');
 		var todos = document.querySelectorAll('.app__list-item');
-		for (var i = 0; i <= todos.length; i++)
+		for (var i = 0; i < todos.length; i++)
 		{
 			todos[i].style.display = "block";
 		}
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
-		for (var i = 0; i <= doneTodos.length; i++)
+		for (var i = 0; i < doneTodos.length; i++)
 		{
 			doneTodos[i].style.display = "none";
 		}
@@ -244,9 +244,9 @@ document.addEventListener("DOMContentLoaded", function ()
 			todos[i].style.display = "block";
 		} */
 		var doneTodos = document.querySelectorAll('.app__list-item--done');
-		for (var i = 0; i <= todos.length; i++)
+		for (var i = 0; i < todos.length; i++)
 			todos[i].style.display = "none";
-		for (var j = 0; j <= doneTodos.length; j++)
+		for (var j = 0; j < doneTodos.length; j++)
 			doneTodos[j].style.display = "block";
 
 	}
