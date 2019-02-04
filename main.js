@@ -159,6 +159,9 @@ document.addEventListener("DOMContentLoaded", function ()
 		else document.querySelector(".todo-count").innerHTML = "item left";
 		if ((allTodos.length - doneTodos.length) == 0)
 			document.querySelector(".todo-count").innerHTML = "items left";
+		if ((allTodos.length - doneTodos.length) > 9)
+			document.querySelector(".todo-count").style.marginLeft = "10px";
+		else 	document.querySelector(".todo-count").style.marginLeft = "0px";
 	}
 
 	var alldone = document.querySelector('.toggle-all');
