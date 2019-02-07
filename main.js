@@ -324,13 +324,14 @@ document.addEventListener("DOMContentLoaded", function ()
 					}
 				})
 
-				input.addEventListener('mouseup', function (e))
+				input.addEventListener('mouseup', function (e)
+				{
 				if(e.onclick === 0)
 				{
 					text.innerHTML = this.value;
 					this.value = "";
 					input.remove();
 				}
-
+			})
 			}})
 });
