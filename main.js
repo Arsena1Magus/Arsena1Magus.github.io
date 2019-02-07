@@ -322,6 +322,12 @@ document.addEventListener("DOMContentLoaded", function ()
 						this.value = "";
 						input.remove();
 					}
+					else if(e.onclick === 0)
+					{
+						text.innerHTML = this.value;
+						this.value = "";
+						input.remove();
+					}
 				})
 			}})
 });
