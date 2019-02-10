@@ -322,16 +322,13 @@ document.addEventListener("DOMContentLoaded", function ()
 						this.value = "";
 						input.remove();
 					}
-				})
-
-				input.addEventListener('mousedown', function (e)
-				{
-					if(Window.onclick)
+					else if(Window.onclick)
 					{
 						text.innerHTML = this.value;
 						this.value = "";
 						input.remove();
 					}
-			})
+				})
+
 			}})
 });
