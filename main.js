@@ -324,9 +324,9 @@ document.addEventListener("DOMContentLoaded", function ()
 					}
 				})
 
-				input.addEventListener('mouseup', function (e)
+				input.addEventListener('mousedown', function (e)
 				{
-				if(document.onclick)
+				if(Window.onclick)
 				{
 					text.innerHTML = this.value;
 					this.value = "";
