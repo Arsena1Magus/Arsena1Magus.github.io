@@ -326,12 +326,12 @@ document.addEventListener("DOMContentLoaded", function ()
 
 				input.addEventListener('mousedown', function (e)
 				{
-				if(Window.onclick)
-				{
-					text.innerHTML = this.value;
-					this.value = "";
-					input.remove();
-				}
+					if(Window.onclick)
+					{
+						text.innerHTML = this.value;
+						this.value = "";
+						input.remove();
+					}
 			})
 			}})
 });
