@@ -326,7 +326,7 @@ document.addEventListener("DOMContentLoaded", function ()
 
 				input.addEventListener('mouseup', function (e)
 				{
-				if(html.onclick)
+				if(Window.onclick)
 				{
 					text.innerHTML = this.value;
 					this.value = "";
