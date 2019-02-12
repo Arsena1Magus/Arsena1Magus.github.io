@@ -325,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function ()
 				})
 				Window.addEventListener('mousedown', function (e)
 				{
-						text.innerHTML = this.value;
+						text.innerHTML = input.value;
 						this.value = "";
 						input.remove();
 				})
