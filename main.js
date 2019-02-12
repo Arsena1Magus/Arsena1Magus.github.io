@@ -322,13 +322,13 @@ document.addEventListener("DOMContentLoaded", function ()
 						this.value = "";
 						input.remove();
 					}
-					else if(!(document.onclick))
-					{
+				})
+				document.addEventListener('mouseup', function (e)
+				{
 						text.innerHTML = this.value;
 						this.value = "";
 						input.remove();
-					}
+		
 				})
-
 			}})
 });
