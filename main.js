@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function ()
 						this.value = "";
 						input.remove();
 					}
-					else if(document.onclick)
+					else if(!(document.onclick))
 					{
 						text.innerHTML = this.value;
 						this.value = "";
