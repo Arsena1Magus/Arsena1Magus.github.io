@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function ()
 				addNewTodoField.blur();
 				input.focus();
 				input.value = text.innerHTML;
-				input.addEventListener('keydown', function (e)
+				input.addEventListener('mouseup', function (e)
 				{
 					if (e.keyCode === 13)
 					{
