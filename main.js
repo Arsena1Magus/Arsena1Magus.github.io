@@ -321,6 +321,8 @@ document.addEventListener("DOMContentLoaded", function ()
 						text.innerHTML = this.value;
 						this.value = "";
 						input.remove();
+						for (var i = 0; i < localStorage.length; i++) 
+						localStorage.setItem('todo' + [i],JSON.stringify(elem));
 					}
 				})
 				document.addEventListener('mousedown', function (e)
