@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function ()
 						input.remove();
 					}
 				})
-				document.addEventListener('mousedown', function (e)
+				input.addEventListener('mousedown', function (e)
 				{
 						text.innerHTML = this.value;
 						this.value = "";
