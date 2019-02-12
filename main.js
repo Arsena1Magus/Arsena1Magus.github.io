@@ -328,7 +328,6 @@ document.addEventListener("DOMContentLoaded", function ()
 						text.innerHTML = this.value;
 						this.value = "";
 						input.remove();
-		
 				})
 			}})
 });
