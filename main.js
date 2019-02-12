@@ -309,6 +309,7 @@ document.addEventListener("DOMContentLoaded", function ()
 				var input = document.createElement('input');
 				var text =	event.target;
 				var item = event.target.parentNode;
+				var local_item;
 				input.classList.add('app__list-input');
 				item.appendChild(input);
 				addNewTodoField.blur();
@@ -321,8 +322,12 @@ document.addEventListener("DOMContentLoaded", function ()
 						text.innerHTML = this.value;
 						this.value = "";
 						input.remove();
-						for (var i = 0; i < localStorage.length; i++) 
-						localStorage.setItem('todo' + [i],JSON.stringify(elem));
+						for (var i = 0; i < localStorage.length; i++) {
+							item_item = JSON.parse(localStorage.getItem("todo"+[i]));
+								if (text == local_item.todoContent){
+										localStorage.setItem('todo'+ [i], JSON.stringify(item));
+										break;
+									}}
 					}
 				})
 				document.addEventListener('mousedown', function (e)
