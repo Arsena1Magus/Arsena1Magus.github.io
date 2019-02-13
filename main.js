@@ -323,9 +323,9 @@ document.addEventListener("DOMContentLoaded", function ()
 						this.value = "";
 						input.remove();
 						for (var i = 0; i < localStorage.length; i++) {
-							item_item = JSON.parse(localStorage.getItem("todo"+[i]));
+							local_item = JSON.parse(localStorage.getItem("todo"+[i]));
 								if (text == local_item.todoContent){
-										localStorage.setItem('todo'+ [i], JSON.stringify(item));
+										localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
 										break;
 									}}
 					}
