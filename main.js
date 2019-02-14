@@ -319,13 +319,6 @@ document.addEventListener("DOMContentLoaded", function ()
 				{
 					if (e.keyCode === 13)
 					{
-						for (var i = 0; i < localStorage.length; i++) {
-							local_item = JSON.parse(localStorage.getItem("todo"+[i]));
-								if (text.innerHTML == local_item.todoContent){
-										local_item.todoContent = this.value;
-										localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
-										break;
-									}}
 						text.innerHTML = this.value;
 						this.value = "";
 						input.remove();
@@ -333,6 +326,13 @@ document.addEventListener("DOMContentLoaded", function ()
 				})
 				document.addEventListener('mousedown', function (e)
 				{
+					for (var i = 0; i < localStorage.length; i++) {
+						local_item = JSON.parse(localStorage.getItem("todo"+[i]));
+							if (text.innerHTML == local_item.todoContent){
+									local_item.todoContent = input.value;
+									localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
+									break;
+								}}
 						text.innerHTML = input.value;
 						this.value = "";
 						input.remove();
