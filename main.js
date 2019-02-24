@@ -262,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function ()
 				for (var j = 0; j < doneTodos.length; j++)
 					doneTodos[j].style.display = "none";
 			}
-			else if(comleteBtn.classList.contains('.selected') == true)
+			else if(completedBtn.classList.contains('.selected') == true)
 			{
 				for (var i = 0; i < todos.length; i++)
 					todos[i].style.display = "none";
