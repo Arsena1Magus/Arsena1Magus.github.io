@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		var todos = document.querySelectorAll('.app__list-item');
 			var doneTodos = document.querySelectorAll('.app__list-item--done');
 			var i,j;
-		if (activeBtn.classList.contains('.selected') == true){
+		if (activeBtn.classList.contains('.selected') != true){
 				for (i = 0; i < todos.length; i++)
 					todos[i].style.display = "block";
 				for (j = 0; j < doneTodos.length; j++)
