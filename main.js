@@ -255,14 +255,14 @@ document.addEventListener("DOMContentLoaded", function ()
 	function update_list(){
 		var todos = document.querySelectorAll('.app__list-item');
 			var doneTodos = document.querySelectorAll('.app__list-item--done');
-		if (allBtn.classList.contains(.'selected') == true)
+		if (allBtn.classList.contains('.selected') == true)
 			{
 				for (var i = 0; i < todos.length; i++)
 					todos[i].style.display = "block";
 				for (var j = 0; j < doneTodos.length; j++)
 					doneTodos[j].style.display = "none";
 			}
-			else if(comleteBtn.classList.contains(.'selected') == true)
+			else if(comleteBtn.classList.contains('.selected') == true)
 			{
 				for (var i = 0; i < todos.length; i++)
 					todos[i].style.display = "none";
