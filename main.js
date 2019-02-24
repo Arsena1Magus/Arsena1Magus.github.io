@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function ()
 									break;
 								}}
 						text.innerHTML = input.value;
-						this.value = "";
+						input.value = "";
 						input.remove();
 				})
 			}})
