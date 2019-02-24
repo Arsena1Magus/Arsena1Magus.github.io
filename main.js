@@ -130,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		removeEl.remove();
 		currentTodos();
 		display_footer();
-		var item;
+		var item ;
 		var i,j;
 		for (i = 0; i < localStorage.length; i++) {
 			item = JSON.parse(localStorage.getItem('todo'+ [i]));
