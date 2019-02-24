@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function ()
 						input.remove();
 						if(text.innerHTML == ""){
 								let removeEl = item.parentNode,
-									removeElId = removeEl.id;
+									removeElId = item.id;
 								removeEl.remove();
 								currentTodos();
 								display_footer();
