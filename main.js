@@ -322,6 +322,8 @@ document.addEventListener("DOMContentLoaded", function ()
 						text.innerHTML = this.value;
 						this.value = "";
 						input.remove();
+						if(item == 0)
+						removeTodo(item);
 					}
 				})
 				document.addEventListener('mousedown', function (e)
@@ -336,6 +338,8 @@ document.addEventListener("DOMContentLoaded", function ()
 						text.innerHTML = input.value;
 						input.value = "";
 						input.remove();
+						if(item == 0)
+						removeTodo(item);
 				})
 			}})
 });
