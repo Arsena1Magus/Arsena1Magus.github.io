@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function ()
 						text.innerHTML = this.value;
 						this.value = "";
 						input.remove();
-						if(text.innerHTML = ""){
+						if(text.innerHTML == ""){
 						removeTodo(item);
 					}
 					}
