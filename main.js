@@ -172,7 +172,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		var todos = document.querySelectorAll('.app__list-item');
 		if (alldone.checked == true)
 		{
-			for (var i = 0; i <= todos.length; i++)
+			for (var i = 0; i < todos.length; i++)
 			{
 				if (document.querySelector('.toggle')){
 				todos[i].classList.add('app__list-item--done');
@@ -187,7 +187,7 @@ document.addEventListener("DOMContentLoaded", function ()
 		}
 		else
 		{
-			for (var i = 0; i <= todos.length; i++)
+			for (var i = 0; i < todos.length; i++)
 			{
 				if(document.querySelector('.toggle--done')){
 				todos[i].classList.remove('app__list-item--done');
