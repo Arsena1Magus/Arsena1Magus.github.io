@@ -375,8 +375,8 @@ document.addEventListener("DOMContentLoaded", function ()
 									localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
 									break;
 								}}
-						text.innerHTML = input.value;
-						input.value = "";
+						text.innerHTML = event.value;
+						event.value = "";
 						input.remove();
 						if(item == 0)
 						removeTodo(item);
