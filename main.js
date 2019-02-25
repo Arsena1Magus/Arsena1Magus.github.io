@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function ()
 				display_clear();
 			}
 			for (var i = 0; i < todos.length; i++) {
-				todos[i].classList.add('app__list-item--done');
+				todos[i].classList.remove('app__list-item--done');
 			}
 		}
 
