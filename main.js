@@ -361,7 +361,7 @@ document.addEventListener("DOMContentLoaded", function ()
 					}
 					}
 				})
-	/*		 document.addEventListener('mousedown', function (e)
+			 document.addEventListener('mousedown', function (e)
 				{
 					for (var i = 0; i < localStorage.length; i++) {
 						local_item = JSON.parse(localStorage.getItem("todo"+[i]));
@@ -375,6 +375,6 @@ document.addEventListener("DOMContentLoaded", function ()
 						input.remove();
 						if(item == 0)
 						removeTodo(item);
-				}) */
+				})
 			}})
 });
