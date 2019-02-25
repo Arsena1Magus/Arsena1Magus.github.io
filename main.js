@@ -261,13 +261,13 @@ document.addEventListener("DOMContentLoaded", function ()
 		var todos = document.querySelectorAll('.app__list-item');
 			var doneTodos = document.querySelectorAll('.app__list-item--done');
 			var i,j;
-		if (activeBtn.classList.contains('.selected') === true){
+		if (activeBtn.classList.contains('.active') === true){
 				for (i = 0; i < todos.length; i++)
 					todos[i].style.display = "block";
 				for (j = 0; j < doneTodos.length; j++)
 					doneTodos[j].style.display = "none";
 			}
-			else if(completedBtn.classList.contains('.selected') === true){
+			else if(completedBtn.classList.contains('.selected') == true){
 				for (var i = 0; i < todos.length; i++)
 					todos[i].style.display = "none";
 				for (var j = 0; j < doneTodos.length; j++)
