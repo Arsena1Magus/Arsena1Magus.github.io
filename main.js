@@ -175,7 +175,6 @@ document.addEventListener("DOMContentLoaded", function ()
 			for (var i = 0; i < todos.length; i++)
 			{
 				if (document.querySelector('.toggle')){
-				todos[i].classList.add('app__list-item--done');
 				document.querySelector('.toggle').classList.add('toggle--done');
 				document.querySelector('.toggle').classList.remove('toggle');
 				item = JSON.parse(localStorage.getItem("todo"+[i]));
@@ -183,6 +182,9 @@ document.addEventListener("DOMContentLoaded", function ()
 				localStorage.setItem('todo'+ [i], JSON.stringify(item));
 			}
 				display_clear();
+			}
+			for (var i = 0; i < todos.length; i++) {
+				todos[i].classList.add('app__list-item--done');
 			}
 		}
 		else
@@ -198,6 +200,9 @@ document.addEventListener("DOMContentLoaded", function ()
 				localStorage.setItem('todo'+ [i], JSON.stringify(item));
 			}
 				display_clear();
+			}
+			for (var i = 0; i < todos.length; i++) {
+				todos[i].classList.add('app__list-item--done');
 			}
 		}
 
