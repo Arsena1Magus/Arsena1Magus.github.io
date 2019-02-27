@@ -273,6 +273,7 @@ document.addEventListener("DOMContentLoaded", function ()
 					for (var i = 0; i < todos.length; i++)
 						todos[i].style.display = "block";
 
+
 	}
 
 	function display_clear()
