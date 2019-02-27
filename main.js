@@ -205,7 +205,7 @@ document.addEventListener("DOMContentLoaded", function ()
 				todos[i].classList.remove('app__list-item--done');
 			}
 		}
-
+		currentTodos();
 	}
 
 	allBtn.onclick = function ()
