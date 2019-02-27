@@ -269,10 +269,10 @@ document.addEventListener("DOMContentLoaded", function ()
 				for (var j = 0; j < doneTodos.length; j++)
 					doneTodos[j].style.display = "block";
 			}
-			else (allBtn.classList.contains('selected') == true ){
+			else (allBtn.classList.contains('selected') == true)
 					for (var i = 0; i < todos.length; i++)
 						todos[i].style.display = "block";
-			}
+
 	}
 
 	function display_clear()
