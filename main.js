@@ -310,7 +310,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 					text.innerHTML = event.value;
                 					event.value = "";
                 					input.remove();
-                					if(item == 0) {
+                					if(text.innerHTML == "") {
 														removeEl.remove();
 														currentTodos();
 														display_footer();
