@@ -295,8 +295,6 @@ document.addEventListener("DOMContentLoaded", function() {
                                 }
                             }
                             localStorage.removeItem('todo' + [i]);
-                            for (i = 0; i < todos.length; i++)
-															todos[i].style.display = "block";
                         }
                     }
                 })
