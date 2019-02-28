@@ -267,6 +267,8 @@ document.addEventListener("DOMContentLoaded", function() {
             var text = event.target;
             var item = event.target.parentNode;
             var local_item;
+						let removeEl = item,
+								removeElId = item.id;
             input.classList.add('app__list-input');
             item.appendChild(input);
             addNewTodoField.blur();
@@ -278,8 +280,6 @@ document.addEventListener("DOMContentLoaded", function() {
                         this.value = "";
                         input.remove();
                         if (text.innerHTML == "") {
-                            let removeEl = item,
-                                removeElId = item.id;
                             removeEl.remove();
                             currentTodos();
                             display_footer();
@@ -298,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         }
                     }
                 })
-                /*		 document.addEventListener('mouseup', function (e)
+                	 document.addEventListener('mouseup', function (e)
                 			{
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
@@ -310,9 +310,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 					text.innerHTML = event.value;
                 					event.value = "";
                 					input.remove();
-                					if(item == 0)
-                					removeTodo(item);
-                			}) */
+                					if(item == 0) {
+
+													}
+
+                			})
         }
     })
 });
