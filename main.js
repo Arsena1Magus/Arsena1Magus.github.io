@@ -282,6 +282,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             let removeEl = item.parentNode,
                                 removeElId = item.id;
                             removeEl.remove();
+														var todos = document.querySelectorAll('.app__list-item');
                             currentTodos();
                             display_footer();
                             var i, j;
@@ -296,7 +297,8 @@ document.addEventListener("DOMContentLoaded", function() {
                                 }
                             }
                             localStorage.removeItem('todo' + [i]);
-                            for (i = 0; i < todos.length; i++) todos[i].style.display = "block";
+                            for (i = 0; i < todos.length; i++)
+															todos[i].style.display = "block";
                         }
                     }
                 })
