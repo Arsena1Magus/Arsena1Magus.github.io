@@ -226,12 +226,14 @@ document.addEventListener("DOMContentLoaded", function() {
             todos[i].style.display = "block";
             for (j = 0; j < doneTodos.length; j++)
             doneTodos[j].style.display = "none";
-        } else if (completedBtn.classList.contains('selected') == true) {
+        }
+        if (completedBtn.classList.contains('selected') == true) {
             for (var i = 0; i < todos.length; i++)
             todos[i].style.display = "none";
             for (var j = 0; j < doneTodos.length; j++)
             doneTodos[j].style.display = "block";
-        } else(allBtn.classList.contains('selected') == true)
+        }
+        if(allBtn.classList.contains('selected') == true)
         for (var i = 0; i < todos.length; i++)
         todos[i].style.display = "block";
     }
