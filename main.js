@@ -278,10 +278,9 @@ document.addEventListener("DOMContentLoaded", function() {
                         this.value = "";
                         input.remove();
                         if (text.innerHTML == "") {
-                            let removeEl = item.parentNode,
+                            let removeEl = item,
                                 removeElId = item.id;
                             removeEl.remove();
-	                          var todos = document.querySelectorAll('.app__list-item');
                             currentTodos();
                             display_footer();
                             var i, j;
