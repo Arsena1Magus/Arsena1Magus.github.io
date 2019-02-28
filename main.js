@@ -284,7 +284,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var input = document.createElement('input');
             var text = event.target;
             var item = event.target.parentNode;
-            var local_item, flag;
+            var local_item, flag=0;
 						let removeEl = item,
 								removeElId = item.id;
             input.classList.add('app__list-input');
