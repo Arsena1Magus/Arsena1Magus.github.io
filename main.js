@@ -328,6 +328,7 @@ document.addEventListener("DOMContentLoaded", function ()
 
 		document.querySelector(".app__list").addEventListener("dblclick", function(event) {
 				if(event.target && event.target.nodeName == "LABEL") {
+				var todos = document.querySelectorAll('.app__list-item');
 				var input = document.createElement('input');
 				var text =	event.target;
 				var item = event.target.parentNode;
@@ -362,7 +363,6 @@ document.addEventListener("DOMContentLoaded", function ()
 									}
 								}
 									localStorage.removeItem('todo'+[i]);
-									var todos = document.querySelectorAll('.app__list-item');
 									for (i = 0; i < todos.length; i++)
 										todos[i].style.display = "block";
 
