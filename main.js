@@ -240,7 +240,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector('.footer').style.display = "block";
         }
     }
-		
+
     clear.onclick = function() {
         var doneTodos = document.querySelectorAll('.app__list-item--done');
         var item;
@@ -268,7 +268,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var input = document.createElement('input');
             var text = event.target;
             var item = event.target.parentNode;
-            var local_item;
+            var local_item, flag;
 						let removeEl = item,
 								removeElId = item.id;
             input.classList.add('app__list-input');
@@ -297,9 +297,11 @@ document.addEventListener("DOMContentLoaded", function() {
                                 }
                             }
                             localStorage.removeItem('todo' + [i]);
+                            flag = 1;
                         }
                     }
                 })
+                if(flag==0){
                 	 document.addEventListener('mouseup', function (e)
                 			{
                 				for (var i = 0; i < localStorage.length; i++) {
@@ -330,6 +332,7 @@ document.addEventListener("DOMContentLoaded", function() {
 														localStorage.removeItem('todo' + [i]);
 													}
                 			})
+                    }
         }
     })
 });
