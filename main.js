@@ -240,6 +240,7 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector('.footer').style.display = "block";
         }
     }
+		
     clear.onclick = function() {
         var doneTodos = document.querySelectorAll('.app__list-item--done');
         var item;
@@ -261,6 +262,7 @@ document.addEventListener("DOMContentLoaded", function() {
         display_clear();
         display_footer()
     }
+
     document.querySelector(".app__list").addEventListener("dblclick", function(event) {
         if (event.target && event.target.nodeName == "LABEL") {
             var input = document.createElement('input');
