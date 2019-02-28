@@ -138,10 +138,13 @@ document.addEventListener("DOMContentLoaded", function() {
         var currentTodos = document.getElementById("js-current-todos");
         var doneTodos = document.querySelectorAll('.app__list-item--done');
         currentTodos.innerHTML = allTodos.length - doneTodos.length;
-        if ((allTodos.length - doneTodos.length) > 1) document.querySelector(".todo-count").innerHTML = "items left";
+        if ((allTodos.length - doneTodos.length) > 1)
+        document.querySelector(".todo-count").innerHTML = "items left";
         else document.querySelector(".todo-count").innerHTML = "item left";
-        if ((allTodos.length - doneTodos.length) == 0) document.querySelector(".todo-count").innerHTML = "items left";
-        if ((allTodos.length - doneTodos.length) > 9) document.querySelector(".todo-count").style.marginLeft = "10px";
+        if ((allTodos.length - doneTodos.length) == 0)
+        document.querySelector(".todo-count").innerHTML = "items left";
+        if ((allTodos.length - doneTodos.length) > 9)
+        document.querySelector(".todo-count").style.marginLeft = "10px";
         else document.querySelector(".todo-count").style.marginLeft = "0px";
     }
     var alldone = document.querySelector('.toggle-all');
@@ -208,8 +211,10 @@ document.addEventListener("DOMContentLoaded", function() {
         completedBtn.classList.add('selected');
         var todos = document.querySelectorAll('.app__list-item');
         var doneTodos = document.querySelectorAll('.app__list-item--done');
-        for (var i = 0; i < todos.length; i++) todos[i].style.display = "none";
-        for (var j = 0; j < doneTodos.length; j++) doneTodos[j].style.display = "block";
+        for (var i = 0; i < todos.length; i++)
+        todos[i].style.display = "none";
+        for (var j = 0; j < doneTodos.length; j++)
+        doneTodos[j].style.display = "block";
     }
 
     function update_list() {
@@ -217,13 +222,18 @@ document.addEventListener("DOMContentLoaded", function() {
         var doneTodos = document.querySelectorAll('.app__list-item--done');
         var i, j;
         if (activeBtn.classList.contains('selected') == true) {
-            for (i = 0; i < todos.length; i++) todos[i].style.display = "block";
-            for (j = 0; j < doneTodos.length; j++) doneTodos[j].style.display = "none";
+            for (i = 0; i < todos.length; i++)
+            todos[i].style.display = "block";
+            for (j = 0; j < doneTodos.length; j++)
+            doneTodos[j].style.display = "none";
         } else if (completedBtn.classList.contains('selected') == true) {
-            for (var i = 0; i < todos.length; i++) todos[i].style.display = "none";
-            for (var j = 0; j < doneTodos.length; j++) doneTodos[j].style.display = "block";
+            for (var i = 0; i < todos.length; i++)
+            todos[i].style.display = "none";
+            for (var j = 0; j < doneTodos.length; j++)
+            doneTodos[j].style.display = "block";
         } else(allBtn.classList.contains('selected') == true)
-        for (var i = 0; i < todos.length; i++) todos[i].style.display = "block";
+        for (var i = 0; i < todos.length; i++)
+        todos[i].style.display = "block";
     }
 
     function display_clear() {
