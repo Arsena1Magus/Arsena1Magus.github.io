@@ -364,6 +364,7 @@ document.addEventListener("DOMContentLoaded", function ()
 									}
 								}
 									localStorage.removeItem('todo'+[i]);
+									var todos = document.querySelectorAll('.app__list-item');
 									for (i = 0; i < todos.length; i++)
 										todos[i].style.display = "block";
 
