@@ -326,8 +326,6 @@ document.addEventListener("DOMContentLoaded", function ()
 		display_footer()
 		}
 
-
-
 		document.querySelector(".app__list").addEventListener("dblclick", function(event) {
 				if(event.target && event.target.nodeName == "LABEL") {
 				var input = document.createElement('input');
