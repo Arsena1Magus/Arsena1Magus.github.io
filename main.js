@@ -311,7 +311,21 @@ document.addEventListener("DOMContentLoaded", function() {
                 					event.value = "";
                 					input.remove();
                 					if(item == 0) {
-
+														removeEl.remove();
+														currentTodos();
+														display_footer();
+														var i, j;
+														for (i = 0; i < localStorage.length; i++) {
+																item = JSON.parse(localStorage.getItem('todo' + [i]));
+																if (removeElId == item.todoId) {
+																		for (j = i + 1; j < localStorage.length; j++, i++) {
+																				item = JSON.parse(localStorage.getItem('todo' + [j]));
+																				localStorage.setItem('todo' + [i], JSON.stringify(item));
+																		}
+																		break;
+																}
+														}
+														localStorage.removeItem('todo' + [i]);
 													}
 
                 			})
