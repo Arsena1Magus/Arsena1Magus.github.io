@@ -328,7 +328,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 						if (text.innerHTML == local_item.todoContent){
                 								local_item.todoContent = input.value;
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
-                                flag--;
                 								break;
                 							}}
                 					text.innerHTML = input.value;
@@ -352,6 +351,7 @@ document.addEventListener("DOMContentLoaded", function() {
 														localStorage.removeItem('todo' + [i]);
 													}
                         }
+                          flag--;
                 			})
 
         }
