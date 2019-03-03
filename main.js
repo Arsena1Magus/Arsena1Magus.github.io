@@ -181,6 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
         currentTodos();
+        display_clear();
     }
     allBtn.onclick = function() {
         allBtn.classList.add('selected');
