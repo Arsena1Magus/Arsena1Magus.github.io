@@ -284,7 +284,6 @@ document.addEventListener("DOMContentLoaded", function() {
             var fl = 0;
         if (event.target && event.target.nodeName == "LABEL") {
             flag++;
-            fl++;
             var input = document.createElement('input');
             var text = event.target;
             var item = event.target.parentNode;
@@ -298,6 +297,7 @@ document.addEventListener("DOMContentLoaded", function() {
             input.value = text.innerHTML;
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
+                      fl++;
                         text.innerHTML = this.value;
                         this.value = "";
                         input.remove();
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 	 document.addEventListener('mouseup', function (e)
                 			{
                         flag++;
-                        if(flag == 2 && fl != 1 ) {
+                        if(flag == 2 && fl == 1 ) {
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
