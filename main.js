@@ -318,7 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     }
                 })
                 if(flag==0){
-                	 document.addEventListener('mouseup', function (e)
+                	 document.body.addEventListener('mouseup', function (e)
                 			{
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
