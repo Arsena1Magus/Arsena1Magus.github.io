@@ -280,11 +280,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.querySelector(".app__list").addEventListener("dblclick", function(event) {
+            var flag = 0;
         if (event.target && event.target.nodeName == "LABEL") {
+            flag++;
             var input = document.createElement('input');
             var text = event.target;
             var item = event.target.parentNode;
-            var local_item, flag=0;
+            var local_item;
 						let removeEl = item,
 								removeElId = item.id;
             input.classList.add('app__list-input');
@@ -313,11 +315,9 @@ document.addEventListener("DOMContentLoaded", function() {
                                 }
                             }
                             localStorage.removeItem('todo' + [i]);
-                            flag = 1;
                         }
                     }
                 })
-                if(flag==0){
                 	 document.addEventListener('mouseup', function (e)
                 			{
                 				for (var i = 0; i < localStorage.length; i++) {
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                              if(input != null) {
+                              if(flag != null) {
                 					text.innerHTML = input.value;
                 					input.value = "";
                 					input.remove();
@@ -350,7 +350,7 @@ document.addEventListener("DOMContentLoaded", function() {
 													}
                         }
                 			})
-                    }
+
         }
     })
 });
