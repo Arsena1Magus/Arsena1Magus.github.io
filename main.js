@@ -320,6 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 })
                 	 document.addEventListener('mouseup', function (e)
                 			{
+                        flag++;
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
@@ -327,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                              if(flag != null) {
+                              if(flag == 2) {
                 					text.innerHTML = input.value;
                 					input.value = "";
                 					input.remove();
