@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     display_clear();
     addNewTodoField.addEventListener('keyup', function(e) {
         if (e.keyCode === 13) {
-          if(this.value != "" && this.value.search(' ') == true && this.value.length < 30 ) {
+          if(this.value != "" &&  this.value.length < 30 ) {
             addTodos(this.value);
             this.value = "";
           }
