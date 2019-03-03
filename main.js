@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 	 document.addEventListener('mouseup', function (e)
                 			{
                         flag++;
-                        if(flag == 2 || fl == 1 ) {
+                        if(flag == 2 && fl == 1 ) {
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
