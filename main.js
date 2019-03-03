@@ -298,6 +298,7 @@ document.addEventListener("DOMContentLoaded", function() {
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
                       fl++;
+                      flag--;
                         text.innerHTML = this.value;
                         this.value = "";
                         input.remove();
