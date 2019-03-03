@@ -296,7 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
             input.value = text.innerHTML;
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
-                      flag--;
+                      flag = flag - 1;
                         text.innerHTML = this.value;
                         this.value = "";
                         input.remove();
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 			{
                         flag++;
                         if(flag == 2) {
-                          flag = flag - 1;
+                          flag = 0;
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
