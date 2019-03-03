@@ -328,7 +328,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                              if(flag == 2) {
+                              if(flag == 2 || flag ==1 ) {
                 					text.innerHTML = input.value;
                 					input.value = "";
                 					input.remove();
