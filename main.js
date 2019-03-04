@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function() {
     if (this.value.match(/^[ ]+$/)) { // В значении только пробелы
         this.value = ''
     }
-          if(this.value != "" && this.value.search(' ') == -1) {
+          if(this.value != "") {
             addTodos(this.value.substr(0,30));
             this.value = "";
           }
