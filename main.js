@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
               text = text + this.value.substr(i, 35);
               document.createElement('br');
             }
-            addTodos(text);
+            addTodos(this.value);
             this.value = "";
           }
         }
@@ -83,7 +83,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 item.classList.add('app__list-item');
         }
         item.id = el.todoId;
-        text.innerHTML = el.todoContent;
+        for (var i = 0; i < this.value.length; i=i+35 )
+        {
+          text.innerHTML = el.todoContent;.substr(i, 35);
+          document.createElement('br');
+        }
+        //text.innerHTML = el.todoContent;
         item.appendChild(done);
         item.appendChild(remove);
         item.appendChild(text);
