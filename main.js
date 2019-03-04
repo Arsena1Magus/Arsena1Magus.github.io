@@ -352,6 +352,7 @@ document.addEventListener("DOMContentLoaded", function() {
 														localStorage.removeItem('todo' + [i]);
 													}
                         }
+                        flag = flag-1;
                 			})
 
         }
