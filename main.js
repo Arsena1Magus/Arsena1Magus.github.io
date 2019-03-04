@@ -12,16 +12,12 @@ document.addEventListener("DOMContentLoaded", function() {
     display_clear();
     addNewTodoField.addEventListener('keyup', function(e) {
         if (e.keyCode === 13) {
-          addNewTodoField.onkeyup = function () {
-    if (this.value.match(/^[ ]+$/)) { // В значении только пробелы
-        this.value = '';
-    }
-          if(this.value != "") {
+
+          if(this.value != "" && this.value.match(/^[ ]+$/) == false {
             addTodos(this.value.substr(0,35));
             this.value = "";
           }
         }
-      }
     })
 
     function addTodos(str) {
