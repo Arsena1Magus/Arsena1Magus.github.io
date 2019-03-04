@@ -14,8 +14,9 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.keyCode === 13) {
           addNewTodoField.onkeyup = function () {
     if (this.value.match(/^[ ]+$/)) { // В значении только пробелы
-        this.value = ''
+        this.value = '';
     }
+
           if(this.value != "") {
             addTodos(this.value.substr(0,30));
             this.value = "";
