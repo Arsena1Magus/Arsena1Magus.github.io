@@ -280,7 +280,9 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     document.querySelector(".app__list").addEventListener("dblclick", function(event) {
+            var flag = 0;
         if (event.target && event.target.nodeName == "LABEL") {
+            flag++;
             var input = document.createElement('input');
             var text = event.target;
             var item = event.target.parentNode;
@@ -294,6 +296,7 @@ document.addEventListener("DOMContentLoaded", function() {
             input.value = text.innerHTML;
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
+                      flag = flag - 1;
                       for (var i = 0; i < localStorage.length; i++) {
                         local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                           if (text.innerHTML == local_item.todoContent){
@@ -325,8 +328,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 })
                 	 document.addEventListener('mouseup', function (e)
                 			{
-                        e.stopImmediatePropagation();
-                        e.stopPropagation();
+                        flag++;
+                        if(flag == 2) {
+                          flag = 0;
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
@@ -354,6 +358,8 @@ document.addEventListener("DOMContentLoaded", function() {
 														}
 														localStorage.removeItem('todo' + [i]);
 													}
+                        }
+                        flag = flag-1;
                 			})
 
         }
