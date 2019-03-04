@@ -300,11 +300,11 @@ document.addEventListener("DOMContentLoaded", function() {
                       for (var i = 0; i < localStorage.length; i++) {
                         local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                           if (text.innerHTML == local_item.todoContent){
-                              local_item.todoContent = input.value;
+                              local_item.todoContent = input.value.substr(0,30);
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
-                        text.innerHTML = this.value;
+                        text.innerHTML = this.value.substr(0,30);
                         this.value = "";
                         input.remove();
                         if (text.innerHTML == "") {
@@ -334,11 +334,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
-                								local_item.todoContent = input.value;
+                								local_item.todoContent = input.value.substr(0,30);
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                					text.innerHTML = input.value;
+                					text.innerHTML = input.value.substr(0,30);
                 					input.value = "";
                 					input.remove();
                 					if(text.innerHTML == "") {
