@@ -326,6 +326,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 	 document.addEventListener('mouseup', function (e)
                 			{
                         event.stopImmediatePropagation();
+                        e.stopPropagation();
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
