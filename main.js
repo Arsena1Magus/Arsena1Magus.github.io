@@ -11,10 +11,16 @@ document.addEventListener("DOMContentLoaded", function() {
     var clear = document.querySelector('.clear-completed');
     display_clear();
     addNewTodoField.addEventListener('keyup', function(e) {
+      var text;
         if (e.keyCode === 13) {
 
           if(this.value != "" && this.value.match(/^[ ]+$/) == false) {
-            addTodos(this.value.substr(0,35));
+            for (var i = 0; i < this.value.length; i=i+35 )
+            {
+              text = text + this.value.substr(i, 35);
+              document.createElement('br');
+            }
+            addTodos(text);
             this.value = "";
           }
         }
