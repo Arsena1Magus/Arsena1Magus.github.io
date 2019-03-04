@@ -16,9 +16,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (this.value.match(/^[ ]+$/)) { // В значении только пробелы
         this.value = '';
     }
-
           if(this.value != "") {
-            addTodos(this.value.substr(0,30));
+            addTodos(this.value.substr(0,35));
             this.value = "";
           }
         }
@@ -306,11 +305,11 @@ document.addEventListener("DOMContentLoaded", function() {
                       for (var i = 0; i < localStorage.length; i++) {
                         local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                           if (text.innerHTML == local_item.todoContent){
-                              local_item.todoContent = input.value.substr(0,30);
+                              local_item.todoContent = input.value.substr(0,35);
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
-                        text.innerHTML = this.value.substr(0,30);
+                        text.innerHTML = this.value.substr(0,35);
                         this.value = "";
                         input.remove();
                         if (text.innerHTML == "") {
@@ -340,11 +339,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
-                								local_item.todoContent = input.value.substr(0,30);
+                								local_item.todoContent = input.value.substr(0,35);
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                					text.innerHTML = input.value.substr(0,30);
+                					text.innerHTML = input.value.substr(0,35);
                 					input.value = "";
                 					input.remove();
                 					if(text.innerHTML == "") {
