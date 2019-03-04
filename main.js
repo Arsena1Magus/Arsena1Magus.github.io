@@ -321,6 +321,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 })
                 	 document.addEventListener('mouseup', function (e)
                 			{
+                        event.stopImmediatePropagation();
                         flag++;
                         if(flag == 2) {
                           flag = 0;
