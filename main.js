@@ -78,11 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 item.classList.add('app__list-item');
         }
         item.id = el.todoId;
-        for (var i = 0; i < this.value.length; i=i+35 )
-        {
-          text.innerHTML.substr(i, 35) = el.todoContent;
-          document.createElement('br');
-        }
+        text.innerHTML = el.todoContent;
         //text.innerHTML = el.todoContent;
         item.appendChild(done);
         item.appendChild(remove);
@@ -307,11 +303,11 @@ document.addEventListener("DOMContentLoaded", function() {
                       for (var i = 0; i < localStorage.length; i++) {
                         local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                           if (text.innerHTML == local_item.todoContent){
-                              local_item.todoContent = input.value.substr(0,35);
+                              local_item.todoContent = input.value;
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
-                        text.innerHTML = this.value.substr(0,35);
+                        text.innerHTML = this.value;
                         this.value = "";
                         input.remove();
                         if (text.innerHTML == "") {
@@ -341,11 +337,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 				for (var i = 0; i < localStorage.length; i++) {
                 					local_item = JSON.parse(localStorage.getItem("todo"+[i]));
                 						if (text.innerHTML == local_item.todoContent){
-                								local_item.todoContent = input.value.substr(0,35);
+                								local_item.todoContent = input.value;
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                					text.innerHTML = input.value.substr(0,35);
+                					text.innerHTML = input.value;
                 					input.value = "";
                 					input.remove();
                 					if(text.innerHTML == "") {
