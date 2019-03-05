@@ -15,11 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
         if (e.keyCode === 13) {
 
           if(this.value != "" && this.value.match(/^[ ]+$/) == false) {
-            for (var i = 0; i < this.value.length; i=i+35 )
-            {
-              text = text + this.value.substr(i, 35);
-              document.createElement('br');
-            }
             addTodos(this.value);
             this.value = "";
           }
@@ -85,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function() {
         item.id = el.todoId;
         for (var i = 0; i < this.value.length; i=i+35 )
         {
-          text.innerHTML = el.todoContent;.substr(i, 35);
+          text.innerHTML = el.todoContent.substr(i, 35);
           document.createElement('br');
         }
         //text.innerHTML = el.todoContent;
