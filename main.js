@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var text;
         if (e.keyCode === 13) {
 
-          if(this.value != "" && this.value.match(/^[ ]+$/) == false) {
+          if(this.value != "" && this.value.match(/^[ ]+$/) != false) {
             addTodos(this.value);
             this.value = "";
           }
