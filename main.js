@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 item.classList.add('app__list-item');
         }
         item.id = el.todoId;
-        //text.innerHTML = el.todoContent;
-        text.innerHTML=el.innerHTML.split('').map((v,i)=>(i%31==30)?`${v}<br>`:v).join('');
+        text.innerHTML = el.todoContent;
+        //text.innerHTML=el.innerHTML.split('').map((v,i)=>(i%31==30)?`${v}<br>`:v).join('');
         item.appendChild(done);
         item.appendChild(remove);
         item.appendChild(text);
