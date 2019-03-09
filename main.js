@@ -88,8 +88,8 @@ document.addEventListener("DOMContentLoaded", function() {
           for (;quere!=0; quere--)
         {
           text.innerHTML = el.todoContent.substr(size,30);
-          text.createItem("br");
-          text.createElement('<br />');
+          text.createElement("br");
+          //text.createElement('<br />');
           size = size + 30;
         }
         text.innerHTML = el.todoContent;
