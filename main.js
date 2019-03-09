@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 item.classList.add('app__list-item');
         }
         item.id = el.todoId;
-        var length = el.todoContent.length;
+  /*      var length = el.todoContent.length;
         var quere = length/30;
         if (quere == 0)
           item.style.height = "58px";
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
         for (;quere!=0; quere--)
         {
 
-        }
+        } */
         text.innerHTML = el.todoContent;
         item.appendChild(done);
         item.appendChild(remove);
