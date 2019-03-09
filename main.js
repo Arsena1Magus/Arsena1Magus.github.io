@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function() {
        if (quere == 0)
           item.style.height = 58 + "px";
          else
-        item.style.height = 58*quere + "px";
+        item.style.height = 58+ 58*quere + "px";
         /*  for (;quere!=0; quere--)
         {
 
