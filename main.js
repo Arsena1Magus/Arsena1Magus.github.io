@@ -78,16 +78,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 item.classList.add('app__list-item');
         }
         item.id = el.todoId;
-     var length = el.todoContent.length;
+        var length = el.todoContent.length;
         var quere = Math.floor(length/30);
+        var size = 0;
        if (quere == 0)
           item.style.height = 58 + "px";
          else
         item.style.height = 58+ 58*quere + "px";
-        /*  for (;quere!=0; quere--)
+          for (;quere!=0; quere--)
         {
-
-        } */
+          text.innerHTML = el.todoContent.substr(size,30);
+          item.createItem("br");
+          size = size + 30;
+        }
         text.innerHTML = el.todoContent;
         item.appendChild(done);
         item.appendChild(remove);
