@@ -79,11 +79,11 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         item.id = el.todoId;
      var length = el.todoContent.length;
-        var quere = length/30;
-    //   if (quere == 0)
+        var quere = Math.floor(length/30);
+       if (quere == 0)
           item.style.height = 58 + "px";
-      //    else
-      //  item.style.height = 58*quere + "px";
+         else
+        item.style.height = 58*quere + "px";
         /*  for (;quere!=0; quere--)
         {
 
