@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 item.classList.add('app__list-item');
         }
         item.id = el.todoId;
-        var length = el.todoContent;
+        var length = el.todoContent.length;
         text.innerHTML = el.todoContent;
         //text.innerHTML=el.innerHTML.split('').map((v,i)=>(i%31==30)?`${v}<br>`:v).join('');
         item.appendChild(done);
