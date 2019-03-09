@@ -80,8 +80,12 @@ document.addEventListener("DOMContentLoaded", function() {
         item.id = el.todoId;
         var length = el.todoContent.length;
         var quere = length/30;
+        item.style.height = 58*quere + "px";
+        for (;quere!=0; quere--)
+        {
+
+        }
         text.innerHTML = el.todoContent;
-        //text.innerHTML=el.innerHTML.split('').map((v,i)=>(i%31==30)?`${v}<br>`:v).join('');
         item.appendChild(done);
         item.appendChild(remove);
         item.appendChild(text);
