@@ -79,6 +79,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         item.id = el.todoId;
         var length = el.todoContent.length;
+        var quere = length/30;
         text.innerHTML = el.todoContent;
         //text.innerHTML=el.innerHTML.split('').map((v,i)=>(i%31==30)?`${v}<br>`:v).join('');
         item.appendChild(done);
