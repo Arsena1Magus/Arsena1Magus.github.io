@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
           item.style.height = 58 + "px";
          else
         item.style.height = 58+ 58*quere + "px";
-          for (;quere!=0; quere--)
+          for (;quere < 0; quere--)
         {
           text.innerHTML = el.todoContent.substr(size,30);
           text.appendChild(br);
