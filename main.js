@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
             done = document.createElement('div'),
             text = document.createElement('label'),
             remove = document.createElement('div');
+          var  br = document.createElement("br");
         footer.classList.add('footer');
         done.classList.add('toggle');
         remove.classList.add('app__list-remove');
@@ -88,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
           for (;quere!=0; quere--)
         {
           text.innerHTML = el.todoContent.substr(size,30);
-          document.createElement("br");
+          text.appendChild(br);
           //text.createElement('<br />');
           size = size + 30;
         }
