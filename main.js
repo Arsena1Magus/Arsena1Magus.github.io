@@ -83,9 +83,15 @@ document.addEventListener("DOMContentLoaded", function() {
         var quere = Math.floor(length/30);
         var size = 0;
        if (quere == 0)
+       {
+          done.style.marginTop = 15 + "px";
           item.style.height = 58 + "px";
+        }
          else
-        item.style.height = 58+ 58*quere + "px";
+         {
+        done.style.marginTop = 15 + 15*quere + "px";
+        item.style.height = 58 + 58*quere + "px";
+      }
           for (;quere < 1; quere--)
         {
           text.innerHTML = el.todoContent.substr(size,30);
