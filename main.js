@@ -87,20 +87,22 @@ document.addEventListener("DOMContentLoaded", function() {
           done.style.marginTop = 15 + "px";
           item.style.height = 58 + "px";
           remove.style.marginTop = 10 + "px";
+          text.innerHTML = el.todoContent;
         }
          else
          {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 58*quere + "px";
         remove.style.marginTop = 10 + 10*quere + "px";
+        for (;quere < 1; quere--)
+      {
+        text.innerHTML = el.todoContent.substr(size,30);
+        text.appendChild(br);
+        //text.createElement('<br />');
+        size = size + 30;
       }
-          for (;quere < 1; quere--)
-        {
-          text.innerHTML = el.todoContent.substr(size,30);
-          text.appendChild(br);
-          //text.createElement('<br />');
-          size = size + 30;
-        }
+      }
+
         text.innerHTML = el.todoContent;
         item.appendChild(done);
         item.appendChild(remove);
