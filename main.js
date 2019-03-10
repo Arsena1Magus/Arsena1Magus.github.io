@@ -86,11 +86,13 @@ document.addEventListener("DOMContentLoaded", function() {
        {
           done.style.marginTop = 15 + "px";
           item.style.height = 58 + "px";
+          remove.style.marginTop = 10 + "px";
         }
          else
          {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 58*quere + "px";
+        remove.style.marginTop = 10 + 10*quere + "px";
       }
           for (;quere < 1; quere--)
         {
