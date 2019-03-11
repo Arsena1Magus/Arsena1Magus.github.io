@@ -314,6 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var local_item;
 						let removeEl = it,
 								removeElId = it.id;
+            var done = it.querySelector(".toogle"), remove = it.querySelector(".app__list-remove")
             input.classList.add('app__list-input');
             it.appendChild(input);
             addNewTodoField.blur();
@@ -335,14 +336,14 @@ document.addEventListener("DOMContentLoaded", function() {
                            if (quere == 0)
                            {
                               done.style.marginTop = 15 + "px";
-                              item.style.height = 58 + "px";
+                              it.style.height = 58 + "px";
                               remove.style.marginTop = 10 + "px";
                               text.innerHTML = this.value;
                             }
                              else
                              {
                             done.style.marginTop = 15 + 15*quere + "px";
-                            item.style.height = 58 + 29*quere + "px";
+                            it.style.height = 58 + 29*quere + "px";
                             remove.style.marginTop = 25 + 10*quere + "px";
                             for (;quere < 0; quere--){
                             text.innerHTML = this.value.substr(size,30);
@@ -391,14 +392,14 @@ document.addEventListener("DOMContentLoaded", function() {
                              if (quere == 0)
                              {
                                 done.style.marginTop = 15 + "px";
-                                item.style.height = 58 + "px";
+                                it.style.height = 58 + "px";
                                 remove.style.marginTop = 10 + "px";
                                 text.innerHTML = input.value;
                               }
                                else
                                {
                               done.style.marginTop = 15 + 15*quere + "px";
-                              item.style.height = 58 + 29*quere + "px";
+                              it.style.height = 58 + 29*quere + "px";
                               remove.style.marginTop = 25 + 10*quere + "px";
                               for (;quere < 0; quere--){
                               text.innerHTML = input.value.substr(size,30);
