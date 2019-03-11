@@ -329,7 +329,29 @@ document.addEventListener("DOMContentLoaded", function() {
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
-                        text.innerHTML = this.value;
+                            var length = this.value.length;
+                            var quere = Math.floor(length/30);
+                            var size = 0;
+                           if (quere == 0)
+                           {
+                              done.style.marginTop = 15 + "px";
+                              item.style.height = 58 + "px";
+                              remove.style.marginTop = 10 + "px";
+                              text.innerHTML = this.value;
+                            }
+                             else
+                             {
+                            done.style.marginTop = 15 + 15*quere + "px";
+                            item.style.height = 58 + 29*quere + "px";
+                            remove.style.marginTop = 25 + 10*quere + "px";
+                            for (;quere < 0; quere--){
+                            text.innerHTML = this.value.substr(size,30);
+                            text.appendChild(br);
+                            //text.createElement('<br />');
+                            size = size + 30;
+                          }
+                          }
+                        //text.innerHTML = this.value;
                         this.value = "";
                         input.remove();
                         if (text.innerHTML == "") {
@@ -363,7 +385,28 @@ document.addEventListener("DOMContentLoaded", function() {
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                					text.innerHTML = input.value;
+                              var length = input.value.length;
+                              var quere = Math.floor(length/30);
+                              var size = 0;
+                             if (quere == 0)
+                             {
+                                done.style.marginTop = 15 + "px";
+                                item.style.height = 58 + "px";
+                                remove.style.marginTop = 10 + "px";
+                                text.innerHTML = input.value;
+                              }
+                               else
+                               {
+                              done.style.marginTop = 15 + 15*quere + "px";
+                              item.style.height = 58 + 29*quere + "px";
+                              remove.style.marginTop = 25 + 10*quere + "px";
+                              for (;quere < 0; quere--){
+                              text.innerHTML = input.value.substr(size,30);
+                              text.appendChild(br);
+                              size = size + 30;
+                            }
+                            }
+                				//	text.innerHTML = input.value;
                 					input.value = "";
                 					input.remove();
                 					if(text.innerHTML == "") {
