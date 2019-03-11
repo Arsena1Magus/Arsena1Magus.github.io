@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
          {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 29*quere + "px";
-        remove.style.marginTop = 20 + 10*quere + "px";
+        remove.style.marginTop = 25 + 10*quere + "px";
         for (;quere < 0; quere--){
         text.innerHTML = el.todoContent.substr(size,30);
         text.appendChild(br);
