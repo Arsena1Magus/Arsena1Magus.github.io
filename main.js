@@ -310,12 +310,12 @@ document.addEventListener("DOMContentLoaded", function() {
             flag++;
             var input = document.createElement('input');
             var text = event.target;
-            var item = event.target.parentNode;
+            var it = event.target.parentNode;
             var local_item;
-						let removeEl = item,
-								removeElId = item.id;
+						let removeEl = it,
+								removeElId = it.id;
             input.classList.add('app__list-input');
-            item.appendChild(input);
+            it.appendChild(input);
             addNewTodoField.blur();
             input.focus();
             input.value = text.innerHTML;
@@ -360,11 +360,11 @@ document.addEventListener("DOMContentLoaded", function() {
                             display_footer();
                             var i, j;
                             for (i = 0; i < localStorage.length; i++) {
-                                item = JSON.parse(localStorage.getItem('todo' + [i]));
-                                if (removeElId == item.todoId) {
+                                it = JSON.parse(localStorage.getItem('todo' + [i]));
+                                if (removeElId == it.todoId) {
                                     for (j = i + 1; j < localStorage.length; j++, i++) {
-                                        item = JSON.parse(localStorage.getItem('todo' + [j]));
-                                        localStorage.setItem('todo' + [i], JSON.stringify(item));
+                                        it = JSON.parse(localStorage.getItem('todo' + [j]));
+                                        localStorage.setItem('todo' + [i], JSON.stringify(it));
                                     }
                                     break;
                                 }
@@ -415,11 +415,11 @@ document.addEventListener("DOMContentLoaded", function() {
 														display_footer();
 														var i, j;
 														for (i = 0; i < localStorage.length; i++) {
-																item = JSON.parse(localStorage.getItem('todo' + [i]));
-																if (removeElId == item.todoId) {
+																it = JSON.parse(localStorage.getItem('todo' + [i]));
+																if (removeElId == it.todoId) {
 																		for (j = i + 1; j < localStorage.length; j++, i++) {
-																				item = JSON.parse(localStorage.getItem('todo' + [j]));
-																				localStorage.setItem('todo' + [i], JSON.stringify(item));
+																				it = JSON.parse(localStorage.getItem('todo' + [j]));
+																				localStorage.setItem('todo' + [i], JSON.stringify(it));
 																		}
 																		break;
 																}
