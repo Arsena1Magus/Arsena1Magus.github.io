@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function() {
         size = size + 30;
       }
       }
-
         text.innerHTML = el.todoContent;
         item.appendChild(done);
         item.appendChild(remove);
