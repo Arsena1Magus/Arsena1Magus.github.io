@@ -96,9 +96,8 @@ document.addEventListener("DOMContentLoaded", function() {
         remove.style.marginTop = 25 + 10*quere + "px";
         for (var i = 0;i < quere; i++)
         text.innerHTML = el.todoContent.substr(size,30);
-        text.appendChild(br);
-        //text.createElement('<br />');
         size = size + 30;
+        text.appendChild(br);
       }
       }
         text.innerHTML = el.todoContent;
