@@ -315,11 +315,9 @@ document.addEventListener("DOMContentLoaded", function() {
             var length = this.value.length;
             var quere = Math.floor(length/30), size = 0;
             input.classList.add('app__list-input');
-
-            if (quere == 0)
-               input.style.height = 58 + "px";
-              else
-             input.style.height = 58 + 29*quere + "px";
+            done.style.marginTop = 15 + "px";
+            it.style.height = 58 + "px";
+            remove.style.marginTop = 10 + "px";
             it.appendChild(input);
             addNewTodoField.blur();
             input.focus();
