@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 29*quere + "px";
         remove.style.marginTop = 25 + 10*quere + "px";
-        for (var i = 0;i < quere; i++)
+        for (var i = 0;i < quere; i++){
         text.innerHTML = el.todoContent.substr(size,30);
         size = size + 30;
         text.appendChild(br);
