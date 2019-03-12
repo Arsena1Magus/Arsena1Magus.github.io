@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", function() {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 29*quere + "px";
         remove.style.marginTop = 25 + 10*quere + "px";
-        for (;quere < 0; quere--){
+        for (var i = 0;i < quere; i++)
         text.innerHTML = el.todoContent.substr(size,30);
         text.appendChild(br);
         //text.createElement('<br />');
@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             done.style.marginTop = 15 + 15*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
                             remove.style.marginTop = 25 + 10*quere + "px";
-                            for (;quere < -1; quere--){
+                            for (var i = 0;i < quere; i++){
                             text.innerHTML = txt.substr(size,30);
                             text.appendChild(br);
                             size = size + 30;
