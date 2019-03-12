@@ -330,7 +330,7 @@ document.addEventListener("DOMContentLoaded", function() {
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
-                            var length = this.value.length;
+                            var length = this.value.length, txt = this.value;
                             var quere = Math.floor(length/30), size = 0;
                            if (quere == 0)
                            {
@@ -345,9 +345,8 @@ document.addEventListener("DOMContentLoaded", function() {
                             it.style.height = 58 + 29*quere + "px";
                             remove.style.marginTop = 25 + 10*quere + "px";
                             for (;quere < -1; quere--){
-                            text.innerHTML = this.value.substr(size,30);
+                            text.innerHTML = txt.substr(size,30);
                             text.appendChild(br);
-                            //text.createElement('<br />');
                             size = size + 30;
                           }
                           }
