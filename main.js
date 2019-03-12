@@ -284,8 +284,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     clear.onclick = function() {
         var doneTodos = document.querySelectorAll('.app__list-item--done');
-        var item;
-        var i, j, k;
+        var item, i, j, k;
         for (i = 0; i < doneTodos.length; i++) {
             doneTodos[i].remove();
             for (j = 0; j < localStorage.length; j++) {
@@ -309,13 +308,18 @@ document.addEventListener("DOMContentLoaded", function() {
         if (event.target && event.target.nodeName == "LABEL") {
             flag++;
             var input = document.createElement('input');
-            var text = event.target;
-            var it = event.target.parentNode;
-            var local_item;
+            var text = event.target, it = event.target.parentNode, local_item;
 						let removeEl = it,
 								removeElId = it.id;
-            var done = it.querySelector(".toogle"), remove = it.querySelector(".app__list-remove")
+            var done = it.querySelector(".toogle"), remove = it.querySelector(".app__list-remove");
+            var length = this.value.length;
+            var quere = Math.floor(length/30), size = 0;
             input.classList.add('app__list-input');
+
+            if (quere == 0)
+               input.style.height = 58 + "px";
+              else
+             input.style.height = 58 + 29*quere + "px";
             it.appendChild(input);
             addNewTodoField.blur();
             input.focus();
@@ -330,9 +334,6 @@ document.addEventListener("DOMContentLoaded", function() {
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
-                            var length = this.value.length;
-                            var quere = Math.floor(length/30);
-                            var size = 0;
                            if (quere == 0)
                            {
                               done.style.marginTop = 15 + "px";
@@ -386,9 +387,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                              var length = input.value.length;
-                              var quere = Math.floor(length/30);
-                              var size = 0;
                              if (quere == 0)
                              {
                                 done.style.marginTop = 15 + "px";
