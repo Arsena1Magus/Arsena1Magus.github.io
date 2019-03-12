@@ -312,8 +312,6 @@ document.addEventListener("DOMContentLoaded", function() {
 						let removeEl = it,
 								removeElId = it.id;
             var done = it.querySelector(".toogle"), remove = it.querySelector(".app__list-remove");
-            var length = this.value.length;
-            var quere = Math.floor(length/30), size = 0;
             input.classList.add('app__list-input');
             done.style.marginTop = 15 + "px";
             it.style.height = 58 + "px";
@@ -332,6 +330,8 @@ document.addEventListener("DOMContentLoaded", function() {
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
+                            var length = this.value.length;
+                            var quere = Math.floor(length/30), size = 0;
                            if (quere == 0)
                            {
                               done.style.marginTop = 15 + "px";
@@ -385,6 +385,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
+                              var length = input.value.length;
+                              var quere = Math.floor(length/30), size = 0;
                              if (quere == 0)
                              {
                                 done.style.marginTop = 15 + "px";
