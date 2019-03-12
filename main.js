@@ -344,7 +344,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             done.style.marginTop = 15 + 15*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
                             remove.style.marginTop = 25 + 10*quere + "px";
-                            for (;quere < 0; quere--){
+                            for (;quere < -1; quere--){
                             text.innerHTML = this.value.substr(size,30);
                             text.appendChild(br);
                             //text.createElement('<br />');
