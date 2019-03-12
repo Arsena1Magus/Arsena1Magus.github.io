@@ -345,7 +345,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             remove.style.marginTop = 25 + 10*quere + "px";
                             for (var i = 0;i < quere; i++){
                             text.innerHTML = txt.substr(size,30);
-                            text.appendChild(br);
+                          //  text.appendChild(br);
                             size = size + 30;
                           }
                           }
@@ -399,11 +399,11 @@ document.addEventListener("DOMContentLoaded", function() {
                               remove.style.marginTop = 25 + 10*quere + "px";
                                 for (var i = 0;i < quere; i++){
                               text.innerHTML = input.value.substr(size,30);
-                              text.appendChild(br);
+                            //  text.appendChild(br);
                               size = size + 30;
                             }
                             }
-                				text.innerHTML = input.value;
+                				  text.innerHTML = input.value;
                 					input.value = "";
                 					input.remove();
                 					if(text.innerHTML == "") {
