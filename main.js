@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
         text.appendChild(br);
       }
       }
-      //  text.innerHTML = el.todoContent;
+        text.innerHTML = el.todoContent;
         item.appendChild(done);
         item.appendChild(remove);
         item.appendChild(text);
