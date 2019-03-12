@@ -349,7 +349,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             size = size + 30;
                           }
                           }
-                        //text.innerHTML = this.value;
+                        text.innerHTML = this.value;
                         this.value = "";
                         input.remove();
                         if (text.innerHTML == "") {
@@ -403,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function() {
                               size = size + 30;
                             }
                             }
-                				//	text.innerHTML = input.value;
+                				text.innerHTML = input.value;
                 					input.value = "";
                 					input.remove();
                 					if(text.innerHTML == "") {
