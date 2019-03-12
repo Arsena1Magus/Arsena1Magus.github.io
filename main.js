@@ -311,7 +311,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var text = event.target, it = event.target.parentNode, local_item;
 						let removeEl = it,
 								removeElId = it.id;
-            var done = it.querySelector(".toogle"), remove = it.querySelector(".app__list-remove");
+            var done = it.querySelector(".toggle"), remove = it.querySelector(".app__list-remove");
             input.classList.add('app__list-input');
             done.style.marginTop = 15 + "px";
             it.style.height = 58 + "px";
