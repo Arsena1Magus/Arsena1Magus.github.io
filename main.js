@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             text.innerHTML = txt.substr(size,30);
                           //  text.appendChild(br);
                             size = size + 30;
-                          }
+                           }
                           }
                         text.innerHTML = this.value;
                         this.value = "";
