@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var item_input = it.querySelector(".app__list-input");
             addNewTodoField.blur();
             input.focus();
-            var length = text.innerHTML.length;  
+            var length = text.innerHTML.length;
             var quere = Math.floor(length/30), size_input = 0;
             if(quere == 0) {
             item_input.style.height = 54 + "px";
@@ -323,7 +323,7 @@ document.addEventListener("DOMContentLoaded", function() {
             else {
             item_input.style.height = 54*quere + "px";
             for (var i = 0;i <= quere; i++){
-            input.value = text.innerHTML.substr(size_input,25);
+            input.value += text.innerHTML.substr(size_input,25);
             size_input = size_input + 25;
            }
           }
