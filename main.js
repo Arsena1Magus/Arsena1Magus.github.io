@@ -311,16 +311,17 @@ document.addEventListener("DOMContentLoaded", function() {
             var done = it.querySelector(".toggle"), remove = it.querySelector(".app__list-remove");
             input.classList.add('app__list-input');
             it.appendChild(input);
+            var item_input = it.querySelector(".app__list-input");
             addNewTodoField.blur();
             input.focus();
             var length = input.value.length, txt_input = text.innerHTML;
             var quere = Math.floor(length/30), size_input = 0;
             if(quere == 0) {
-            input.style.height = 54 + "px";
+            item_input.style.height = 54 + "px";
             input.value = text.innerHTML;
           }
             else {
-            input.style.height = 54*quere + "px";
+            item_input.style.height = 54*quere + "px";
             for (var i = 0;i < quere; i++){
             input.value = txt_input.substr(size_input,25);
             size_input = size_input + 25;
