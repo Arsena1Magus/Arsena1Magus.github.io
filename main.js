@@ -324,7 +324,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if(quere == 0)
             input.style.height = 54 + "px";
             else
-            input.style.height = 54 + 54*quere + "px";
+            input.style.height = 54*quere + "px";
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
                       flag = flag - 1;
