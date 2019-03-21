@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function() {
        {
           done.style.marginTop = 15 + "px";
           item.style.height = 58 + "px";
-          remove.style.marginTop = 10 + "px";
+          remove.style.marginBottom = 10 + "px";
           text.innerHTML = el.todoContent;
         }
          else
