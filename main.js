@@ -319,6 +319,12 @@ document.addEventListener("DOMContentLoaded", function() {
             addNewTodoField.blur();
             input.focus();
             input.value = text.innerHTML;
+            var length = input.value.length, txt = input.value;
+            var quere = Math.floor(length/30), size = 0;
+            if(quere == 0)
+            input.style.height = 54 + "px";
+            else
+            input.style.height = 54 + 54*quere + "px";
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
                       flag = flag - 1;
@@ -329,22 +335,21 @@ document.addEventListener("DOMContentLoaded", function() {
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
-                            var length = this.value.length, txt = this.value;
-                            var quere = Math.floor(length/30), size = 0;
+                          //  var length = this.value.length, txt = this.value;
+                          //  var quere = Math.floor(length/30), size = 0;
                            if (quere == 0)
                            {
                               done.style.marginTop = 15 + "px";
                               it.style.height = 58 + "px";
                               remove.style.marginTop = 10 + "px";
                               text.innerHTML = this.value;
-                              input.style.height = 54 + "px";
+                            //  input.style.height = 54 + "px";
                             }
                              else
                              {
                             done.style.marginTop = 15 + 15*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
                             remove.style.marginTop = 25 + 10*quere + "px";
-                            input.style.height = 54 + 54*quere + "px";
                             for (var i = 0;i < quere; i++){
                             text.innerHTML = txt.substr(size,28);
                             size = size + 30;
@@ -384,15 +389,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                              var length = input.value.length;
-                              var quere = Math.floor(length/30), size = 0;
+                              //var length = input.value.length;
+                              //var quere = Math.floor(length/30), size = 0;
                              if (quere == 0)
                              {
                                 done.style.marginTop = 15 + "px";
                                 it.style.height = 58 + "px";
                                 remove.style.marginTop = 10 + "px";
                                 text.innerHTML = input.value;
-                                input.style.height = 54 + "px";
+                              //  input.style.height = 54 + "px";
                               }
                                else
                                {
