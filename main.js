@@ -310,8 +310,6 @@ document.addEventListener("DOMContentLoaded", function() {
 								removeElId = it.id;
             var done = it.querySelector(".toggle"), remove = it.querySelector(".app__list-remove");
             input.classList.add('app__list-input');
-            done.style.marginTop = 15 + "px";
-            it.style.height = 58 + "px";
             it.appendChild(input);
             addNewTodoField.blur();
             input.focus();
