@@ -337,15 +337,16 @@ document.addEventListener("DOMContentLoaded", function() {
                               it.style.height = 58 + "px";
                               remove.style.marginTop = 10 + "px";
                               text.innerHTML = this.value;
+                              input.style.height = 54 + "px";
                             }
                              else
                              {
                             done.style.marginTop = 15 + 15*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
                             remove.style.marginTop = 25 + 10*quere + "px";
+                            input.style.height = 54 + 54*quere + "px";
                             for (var i = 0;i < quere; i++){
                             text.innerHTML = txt.substr(size,28);
-                          //  text.appendChild(br);
                             size = size + 30;
                            }
                           }
@@ -391,12 +392,14 @@ document.addEventListener("DOMContentLoaded", function() {
                                 it.style.height = 58 + "px";
                                 remove.style.marginTop = 10 + "px";
                                 text.innerHTML = input.value;
+                                input.style.height = 54 + "px";
                               }
                                else
                                {
                               done.style.marginTop = 15 + 15*quere + "px";
                               it.style.height = 58 + 29*quere + "px";
                               remove.style.marginTop = 25 + 10*quere + "px";
+
                                 for (var i = 0;i < quere; i++){
                                   text.innerHTML = input.value.substr(size,28);
                             //  text.appendChild(br);
