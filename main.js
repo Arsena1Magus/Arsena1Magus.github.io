@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
          {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 29*quere + "px";
-        remove.style.marginTop = 25 + 10*quere + "px";
+        remove.style.marginTop = 25 + 20*quere + "px";
         for (var i = 0;i < quere; i++){
         text.innerHTML = el.todoContent.substr(size,28);
         size = size + 30;
@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function() {
                              {
                             done.style.marginTop = 15 + 15*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
-                            remove.style.marginTop = 25 + 10*quere + "px";
+                            remove.style.marginTop = 25 + 20*quere + "px";
                             for (var i = 0;i < quere; i++){
                             text.innerHTML = txt.substr(size,25);
                             size = size + 25;
@@ -409,7 +409,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                {
                               done.style.marginTop = 15 + 15*quere + "px";
                               it.style.height = 58 + 29*quere + "px";
-                              remove.style.marginTop = 25 + 10*quere + "px";
+                              remove.style.marginTop = 25 + 20*quere + "px";
 
                                 for (var i = 0;i < quere; i++){
                                   text.innerHTML = input.value.substr(size,25);
