@@ -318,8 +318,8 @@ document.addEventListener("DOMContentLoaded", function() {
             it.appendChild(input);
             addNewTodoField.blur();
             input.focus();
-            var length = input.value.length, txt = input.value, txt_input = text.innerHTML;
-            var quere = Math.floor(length/30), size = 0, size_input = 0;
+            var length = input.value.length, txt_input = text.innerHTML;
+            var quere = Math.floor(length/30), size_input = 0;
             if(quere == 0) {
             input.style.height = 54 + "px";
             input.value = text.innerHTML;
@@ -341,8 +341,8 @@ document.addEventListener("DOMContentLoaded", function() {
                               localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                               break;
                             }}
-                          //  var length = this.value.length, txt = this.value;
-                          //  var quere = Math.floor(length/30), size = 0;
+                          var length = this.value.length, txt = this.value;
+                           var quere = Math.floor(length/30), size = 0;
                            if (quere == 0)
                            {
                               done.style.marginTop = 15 + "px";
@@ -395,8 +395,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 								localStorage.setItem('todo'+ [i], JSON.stringify(local_item));
                 								break;
                 							}}
-                              //var length = input.value.length;
-                              //var quere = Math.floor(length/30), size = 0;
+                              var length = input.value.length;
+                              var quere = Math.floor(length/30), size = 0;
                              if (quere == 0)
                              {
                                 done.style.marginTop = 15 + "px";
