@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var item_input = it.querySelector(".app__list-input");
             addNewTodoField.blur();
             input.focus();
-            var length = input.value.length, txt_input = text.innerHTML;
+            var length = text.innerHTML.length, txt_input = text.innerHTML;
             var quere = Math.floor(length/30), size_input = 0;
             if(quere == 0) {
             item_input.style.height = 54 + "px";
