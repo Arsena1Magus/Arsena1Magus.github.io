@@ -319,7 +319,7 @@ document.addEventListener("DOMContentLoaded", function() {
             addNewTodoField.blur();
             input.focus();
             var length = input.value.length, txt_input = text.innerHTML;
-            var quere = Math.floor(length/30), size_input = 0;
+            var quere = Math.floor(length/28), size_input = 0;
             if(quere == 0) {
             input.style.height = 54 + "px";
             input.value = text.innerHTML;
@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function() {
                               break;
                             }}
                           var length = this.value.length, txt = this.value;
-                           var quere = Math.floor(length/30), size = 0;
+                           var quere = Math.floor(length/28), size = 0;
                            if (quere == 0)
                            {
                               done.style.marginTop = 15 + "px";
@@ -396,7 +396,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 								break;
                 							}}
                               var length = input.value.length;
-                              var quere = Math.floor(length/30), size = 0;
+                              var quere = Math.floor(length/28), size = 0;
                              if (quere == 0)
                              {
                                 done.style.marginTop = 15 + "px";
