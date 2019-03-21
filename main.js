@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
          {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 29*quere + "px";
-        remove.style.marginTop = 25 + 20*quere + "px";
+        remove.style.marginBottom = 25 + 20*quere + "px";
         for (var i = 0;i < quere; i++){
         text.innerHTML = el.todoContent.substr(size,28);
         size = size + 30;
@@ -314,7 +314,7 @@ document.addEventListener("DOMContentLoaded", function() {
             input.classList.add('app__list-input');
             done.style.marginTop = 15 + "px";
             it.style.height = 58 + "px";
-            remove.style.marginTop = 10 + "px";
+            remove.style.marginBottom = 10 + "px";
             it.appendChild(input);
             addNewTodoField.blur();
             input.focus();
@@ -347,7 +347,7 @@ document.addEventListener("DOMContentLoaded", function() {
                            {
                               done.style.marginTop = 15 + "px";
                               it.style.height = 58 + "px";
-                              remove.style.marginTop = 10 + "px";
+                              remove.style.marginBottom = 10 + "px";
                               text.innerHTML = this.value;
                             //  input.style.height = 54 + "px";
                             }
@@ -355,7 +355,7 @@ document.addEventListener("DOMContentLoaded", function() {
                              {
                             done.style.marginTop = 15 + 15*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
-                            remove.style.marginTop = 25 + 20*quere + "px";
+                            remove.style.marginBottom = 25 + 20*quere + "px";
                             for (var i = 0;i < quere; i++){
                             text.innerHTML = txt.substr(size,25);
                             size = size + 25;
@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function() {
                              {
                                 done.style.marginTop = 15 + "px";
                                 it.style.height = 58 + "px";
-                                remove.style.marginTop = 10 + "px";
+                                remove.style.marginBottom = 10 + "px";
                                 text.innerHTML = input.value;
                               //  input.style.height = 54 + "px";
                               }
@@ -409,7 +409,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                {
                               done.style.marginTop = 15 + 15*quere + "px";
                               it.style.height = 58 + 29*quere + "px";
-                              remove.style.marginTop = 25 + 20*quere + "px";
+                              remove.style.marginBottom = 25 + 20*quere + "px";
 
                                 for (var i = 0;i < quere; i++){
                                   text.innerHTML = input.value.substr(size,25);
