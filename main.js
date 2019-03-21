@@ -318,13 +318,19 @@ document.addEventListener("DOMContentLoaded", function() {
             it.appendChild(input);
             addNewTodoField.blur();
             input.focus();
-            input.value = text.innerHTML;
-            var length = input.value.length, txt = input.value;
-            var quere = Math.floor(length/30), size = 0;
-            if(quere == 0)
+            var length = input.value.length, txt = input.value, txt_input = text.innerHTML;
+            var quere = Math.floor(length/30), size = 0, size_input = 0;
+            if(quere == 0) {
             input.style.height = 54 + "px";
-            else
+            input.value = text.innerHTML;
+          }
+            else {
             input.style.height = 54*quere + "px";
+            for (var i = 0;i < quere; i++){
+            input.value = txt_input.substr(size_input,28);
+            size_input = size_input + 30;
+           }
+          }
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
                       flag = flag - 1;
