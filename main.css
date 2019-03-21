@@ -180,7 +180,7 @@ li {
   cursor: pointer;
   width: 32px;
   height: 32px;
-  margin-bottom 10px;
+  bottom: 10px;
   left: 500px;
   transition: all linear 0.3s;
   opacity: 0;
