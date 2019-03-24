@@ -130,6 +130,7 @@ li {
   margin-top: -58px;
   font-size: 24px;
   z-index: 1;
+  word-break: break-all;
 }
 
 .app__list-item--done {
