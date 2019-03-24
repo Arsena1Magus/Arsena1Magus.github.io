@@ -321,7 +321,7 @@ document.addEventListener("DOMContentLoaded", function() {
             input.value = text.innerHTML;
           }
             else {
-            item_input.style.height = 54 + 54*quere + "px";
+            item_input.style.height = 27 + 54*quere + "px";
             for (var i = 0;i <= quere; i++){
             input.value += text.innerHTML.substr(size_input,25);
             size_input = size_input + 25;
