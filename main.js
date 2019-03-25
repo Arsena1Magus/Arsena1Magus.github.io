@@ -92,11 +92,11 @@ document.addEventListener("DOMContentLoaded", function() {
          {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 29*quere + "px";
-        for (var i = 0;i < quere; i++){
-        text.innerHTML = el.todoContent.substr(size,28);
-        size = size + 30;
-        text.appendChild(br);
-      }
+      //  for (var i = 0;i < quere; i++){
+      //  text.innerHTML = el.todoContent.substr(size,28);
+      //  size = size + 30;
+      //  text.appendChild(br);
+    //}
       }
         text.innerHTML = el.todoContent;
         item.appendChild(done);
