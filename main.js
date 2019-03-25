@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
             else {
             item_input.style.height = + 54*quere + "px";
-            item_input.style.marginTop = -58 - quere * 27 + "px";
+            item_input.style.marginTop = -27 - quere * 27 + "px";
           }
           item_input.value = text.innerHTML;
             input.addEventListener('keydown', function(e) {
