@@ -322,7 +322,7 @@ document.addEventListener("DOMContentLoaded", function() {
           }
             else {
             item_input.style.height = 27 + 54*quere + "px";
-            item_input.style.marginTop = "-85px";
+            item_input.style.marginTop = -58 - quere * 27 + "px"; 
       //      for (var i = 0;i <= quere; i++){
         //    input.value += text.innerHTML.substr(size_input,25);
         //    size_input = size_input + 25;
