@@ -339,7 +339,6 @@ document.addEventListener("DOMContentLoaded", function() {
                            {
                               done.style.marginTop = 15 + "px";
                               it.style.height = 58 + "px";
-                              text.innerHTML = this.value;
                             }
                              else
                              {
@@ -382,14 +381,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 							}}
                               var length = input.value.length;
                               var quere = Math.floor(length/30);
-                             if (quere == 0)
-                             {
-                                done.style.marginTop = 15 + "px";
+                             if (quere == 0){
+                               done.style.marginTop = 15 + "px";
                                 it.style.height = 58 + "px";
-                                text.innerHTML = input.value;
                               }
-                               else
-                               {
+                               else{
                               done.style.marginTop = 15 + 15*quere + "px";
                               it.style.height = 58 + 29*quere + "px";
                             }
