@@ -313,13 +313,16 @@ document.addEventListener("DOMContentLoaded", function() {
             var quere = Math.floor(length/30);
             if(quere == 0) {
             item_input.style.height = 54 + "px";
-            input.value = text.innerHTML;
           }
-            else {
+          else if (quere == 1) {
             item_input.style.height = 27 + 54*quere + "px";
             item_input.style.marginTop = -58 - quere * 27 + "px";
-            item_input.value = text.innerHTML;
           }
+            else {
+            item_input.style.height = + 54*quere + "px";
+            item_input.style.marginTop = -58 - quere * 27 + "px";
+          }
+          item_input.value = text.innerHTML;
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
                       flag = flag - 1;
