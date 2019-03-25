@@ -322,10 +322,10 @@ document.addEventListener("DOMContentLoaded", function() {
           }
             else {
             item_input.style.height = 27 + 54*quere + "px";
-            for (var i = 0;i <= quere; i++){
-            input.value += text.innerHTML.substr(size_input,25);
-            size_input = size_input + 25;
-           }
+      //      for (var i = 0;i <= quere; i++){
+        //    input.value += text.innerHTML.substr(size_input,25);
+        //    size_input = size_input + 25;
+        //   }
           }
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
@@ -349,10 +349,10 @@ document.addEventListener("DOMContentLoaded", function() {
                              {
                             done.style.marginTop = 15 + 15*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
-                            for (var i = 0;i < quere; i++){
-                            text.innerHTML = txt.substr(size,25);
-                            size = size + 25;
-                           }
+                  //          for (var i = 0;i < quere; i++){
+                  //          text.innerHTML = txt.substr(size,25);
+                  //          size = size + 25;
+                    //       }
                           }
                         text.innerHTML = this.value;
                         this.value = "";
@@ -400,11 +400,10 @@ document.addEventListener("DOMContentLoaded", function() {
                                {
                               done.style.marginTop = 15 + 15*quere + "px";
                               it.style.height = 58 + 29*quere + "px";
-
-                                for (var i = 0;i < quere; i++){
-                                  text.innerHTML = input.value.substr(size,25);
-                              size = size + 25;
-                            }
+                        //        for (var i = 0;i < quere; i++){
+                        //          text.innerHTML = input.value.substr(size,25);
+                        //      size = size + 25;
+                        //    }
                             }
                 				  text.innerHTML = input.value;
                 					input.value = "";
