@@ -92,11 +92,6 @@ document.addEventListener("DOMContentLoaded", function() {
          {
         done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 29*quere + "px";
-      //  for (var i = 0;i < quere; i++){
-      //  text.innerHTML = el.todoContent.substr(size,28);
-      //  size = size + 30;
-      //  text.appendChild(br);
-    //}
       }
         text.innerHTML = el.todoContent;
         item.appendChild(done);
@@ -315,19 +310,15 @@ document.addEventListener("DOMContentLoaded", function() {
             addNewTodoField.blur();
             input.focus();
             var length = text.innerHTML.length;
-            var quere = Math.floor(length/30), size_input = 0;
+            var quere = Math.floor(length/30);
             if(quere == 0) {
             item_input.style.height = 54 + "px";
             input.value = text.innerHTML;
           }
             else {
             item_input.style.height = 27 + 54*quere + "px";
-            item_input.style.marginTop = -58 - quere * 27 + "px"; 
-      //      for (var i = 0;i <= quere; i++){
-        //    input.value += text.innerHTML.substr(size_input,25);
-        //    size_input = size_input + 25;
-        //   }
-          item_input.value = text.innerHTML;
+            item_input.style.marginTop = -58 - quere * 27 + "px";
+            item_input.value = text.innerHTML;
           }
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
@@ -351,10 +342,6 @@ document.addEventListener("DOMContentLoaded", function() {
                              {
                             done.style.marginTop = 15 + 15*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
-                  //          for (var i = 0;i < quere; i++){
-                  //          text.innerHTML = txt.substr(size,25);
-                  //          size = size + 25;
-                    //       }
                           }
                         text.innerHTML = this.value;
                         this.value = "";
@@ -391,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 								break;
                 							}}
                               var length = input.value.length;
-                              var quere = Math.floor(length/30), size = 0;
+                              var quere = Math.floor(length/30);
                              if (quere == 0)
                              {
                                 done.style.marginTop = 15 + "px";
@@ -402,10 +389,6 @@ document.addEventListener("DOMContentLoaded", function() {
                                {
                               done.style.marginTop = 15 + 15*quere + "px";
                               it.style.height = 58 + 29*quere + "px";
-                        //        for (var i = 0;i < quere; i++){
-                        //          text.innerHTML = input.value.substr(size,25);
-                        //      size = size + 25;
-                        //    }
                             }
                 				  text.innerHTML = input.value;
                 					input.value = "";
