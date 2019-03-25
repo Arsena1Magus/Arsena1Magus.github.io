@@ -299,7 +299,7 @@ document.addEventListener("DOMContentLoaded", function() {
             var flag = 0;
         if (event.target && event.target.nodeName == "LABEL") {
             flag++;
-            var input = document.createElement('input');
+            var input = document.createElement('textarea');
             var text = event.target, it = event.target.parentNode, local_item;
 						let removeEl = it,
 								removeElId = it.id;
