@@ -326,6 +326,7 @@ document.addEventListener("DOMContentLoaded", function() {
         //    input.value += text.innerHTML.substr(size_input,25);
         //    size_input = size_input + 25;
         //   }
+        input value = text.innerHTML;
           }
             input.addEventListener('keydown', function(e) {
                     if (e.keyCode === 13) {
