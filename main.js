@@ -304,6 +304,8 @@ document.addEventListener("DOMContentLoaded", function() {
 						let removeEl = it,
 								removeElId = it.id;
             var done = it.querySelector(".toggle"), remove = it.querySelector(".app__list-remove");
+            if (done == null)
+              done = it.querySelector(".toggle--done");
             input.classList.add('app__list-input');
             it.appendChild(input);
             var item_input = it.querySelector(".app__list-input");
