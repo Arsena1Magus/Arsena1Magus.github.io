@@ -329,11 +329,11 @@ document.addEventListener("DOMContentLoaded", function() {
             item_input.style.height = 54 + "px";
           }
           else if (quere == 1) {
-            item_input.style.height = 27 + 54*quere + "px";
+            item_input.style.height = 27 + 50*quere + "px";
             item_input.style.marginTop = -58 - quere * 23 + "px";
           }
             else {
-            item_input.style.height = 54 + 27*quere + "px";
+            item_input.style.height = 54 + 20*quere + "px";
             item_input.style.marginTop = -54 - quere * 27 + "px";
           }
           item_input.value = text.innerHTML;
