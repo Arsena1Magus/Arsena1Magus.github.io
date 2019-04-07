@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
             done.classList.toggle('toggle');
             done.classList.toggle('toggle--done');
             if (quere == 0){
-              if(done.classList.contains("toogle") == true) {
+              if(done.classList.contains('toogle')== true) {
                done.style.marginTop = 15 + "px"; }
                else done.style.marginTop = 13 + "px";
              }
               else
               {
-                if(done.classList.contains("toogle") == true) {
+                if(done.classList.contains('toogle')== true) {
                  done.style.marginTop = 15 + 15*quere + "px"; }
                 else done.style.marginTop = 13 + 13*quere + "px";
            }
@@ -93,14 +93,14 @@ document.addEventListener("DOMContentLoaded", function() {
         item.id = el.todoId;
        if (quere == 0)
        {
-         if(done.classList.contains("toogle") == true) {
+         if(done.classList.contains('toogle')== true) {
           done.style.marginTop = 15 + "px"; }
           else done.style.marginTop = 13 + "px";
           text.innerHTML = el.todoContent;
         }
          else
          {
-           if(done.classList.contains("toogle") == true) {
+           if(done.classList.contains('toogle')== true) {
             done.style.marginTop = 15 + 15*quere + "px"; }
            else done.style.marginTop = 13 + 13*quere + "px";
       }
@@ -325,10 +325,15 @@ document.addEventListener("DOMContentLoaded", function() {
             input.focus();
             var length = text.innerHTML.length;
             var quere = Math.floor(length/30);
-            if (quere == 1) {
+            if(quere == 0) {
+            item_input.style.height = 54 + "px";
+          }
+          else if (quere == 1) {
+            item_input.style.height = 27 + 54*quere + "px";
             item_input.style.marginTop = -58 - quere * 23 + "px";
           }
-            else if (quere != 0){
+            else {
+            item_input.style.height = 54 + 27*quere + "px";
             item_input.style.marginTop = -54 - quere * 27 + "px";
           }
           item_input.value = text.innerHTML;
@@ -346,13 +351,13 @@ document.addEventListener("DOMContentLoaded", function() {
                            var quere = Math.floor(length/30), size = 0;
                            if (quere == 0)
                            {
-                             if(done.classList.contains("toogle") == true) {
+                             if(done.classList.contains('toogle')== true) {
                               done.style.marginTop = 15 + "px"; }
                              else done.style.marginTop = 13 + "px";
                             }
                              else
                              {
-                               if(done.classList.contains("toogle") == true) {
+                               if(done.classList.contains('toogle')== true) {
                                 done.style.marginTop = 15 + 15*quere + "px"; }
                                else done.style.marginTop = 13 + 13*quere + "px";
                           }
@@ -398,7 +403,7 @@ document.addEventListener("DOMContentLoaded", function() {
                                else done.style.marginTop = 13 + "px";
                               }
                                else{
-                                 if(done.classList.contains('toogle') == true) {
+                                 if(done.classList.contains('toogle')== true) {
                                   done.style.marginTop = 15 + 15*quere + "px"; }
                                  else done.style.marginTop = 13 + 13*quere + "px";
                             }
