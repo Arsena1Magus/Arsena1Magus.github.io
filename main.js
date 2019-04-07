@@ -84,16 +84,16 @@ document.addEventListener("DOMContentLoaded", function() {
         var size = 0;
        if (quere == 0)
        {
-         if(done.classList.contains('.toogle'))
-          done.style.marginTop = 15 + "px";
+         if(done.classList.contains('toogle')) {
+          done.style.marginTop = 15 + "px"; }
           else done.style.marginTop = 13 + "px";
           item.style.height = 58 + "px";
           text.innerHTML = el.todoContent;
         }
          else
          {
-           if(done.classList.contains('.toogle'))
-            done.style.marginTop = 15 + 15*quere + "px";
+           if(done.classList.contains('toogle')) {
+            done.style.marginTop = 15 + 15*quere + "px"; }
            else done.style.marginTop = 13 + 13*quere + "px";
            item.style.height = 58 + 29*quere + "px";
       }
@@ -344,15 +344,15 @@ document.addEventListener("DOMContentLoaded", function() {
                            var quere = Math.floor(length/30), size = 0;
                            if (quere == 0)
                            {
-                             if(done.classList.contains('.toogle'))
-                              done.style.marginTop = 15 + "px";
+                             if(done.classList.contains('toogle')) {
+                              done.style.marginTop = 15 + "px"; }
                              else done.style.marginTop = 13 + "px";
                               it.style.height = 58 + "px";
                             }
                              else
                              {
-                               if(done.classList.contains('.toogle'))
-                                done.style.marginTop = 15 + 15*quere + "px";
+                               if(done.classList.contains('toogle')) {
+                                done.style.marginTop = 15 + 15*quere + "px"; }
                                else done.style.marginTop = 13 + 13*quere + "px";
                             it.style.height = 58 + 29*quere + "px";
                           }
@@ -393,14 +393,14 @@ document.addEventListener("DOMContentLoaded", function() {
                               var length = input.value.length;
                               var quere = Math.floor(length/30);
                              if (quere == 0){
-                               if(done.classList.contains('.toogle'))
-                                done.style.marginTop = 15 + "px";
+                               if(done.classList.contains('toogle')) {
+                                done.style.marginTop = 15 + "px"; }
                                else done.style.marginTop = 13 + "px";
                                 it.style.height = 58 + "px";
                               }
                                else{
-                                 if(done.classList.contains('.toogle'))
-                                  done.style.marginTop = 15 + 15*quere + "px";
+                                 if(done.classList.contains('toogle')) {
+                                  done.style.marginTop = 15 + 15*quere + "px"; }
                                  else done.style.marginTop = 13 + 13*quere + "px";
                               it.style.height = 58 + 29*quere + "px";
                             }
