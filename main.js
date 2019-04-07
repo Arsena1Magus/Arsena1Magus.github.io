@@ -96,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
          if(done.classList.contains('toogle')) {
           done.style.marginTop = 15 + "px"; }
           else done.style.marginTop = 13 + "px";
-      //    item.style.height = 58 + "px";
           text.innerHTML = el.todoContent;
         }
          else
@@ -104,7 +103,6 @@ document.addEventListener("DOMContentLoaded", function() {
            if(done.classList.contains('toogle')) {
             done.style.marginTop = 15 + 15*quere + "px"; }
            else done.style.marginTop = 13 + 13*quere + "px";
-          // item.style.height = 58 + 29*quere + "px";
       }
         text.innerHTML = el.todoContent;
         item.appendChild(done);
@@ -327,15 +325,10 @@ document.addEventListener("DOMContentLoaded", function() {
             input.focus();
             var length = text.innerHTML.length;
             var quere = Math.floor(length/30);
-            if(quere == 0) {
-            item_input.style.height = 54 + "px";
-          }
-          else if (quere == 1) {
-            item_input.style.height = 27 + 54*quere + "px";
+            if (quere == 1) {
             item_input.style.marginTop = -58 - quere * 23 + "px";
           }
-            else {
-            item_input.style.height = 54 + 27*quere + "px";
+            else if (quere != 0){
             item_input.style.marginTop = -54 - quere * 27 + "px";
           }
           item_input.value = text.innerHTML;
@@ -356,14 +349,12 @@ document.addEventListener("DOMContentLoaded", function() {
                              if(done.classList.contains('toogle')) {
                               done.style.marginTop = 15 + "px"; }
                              else done.style.marginTop = 13 + "px";
-                          //    it.style.height = 58 + "px";
                             }
                              else
                              {
                                if(done.classList.contains('toogle')) {
                                 done.style.marginTop = 15 + 15*quere + "px"; }
                                else done.style.marginTop = 13 + 13*quere + "px";
-                          //  it.style.height = 58 + 29*quere + "px";
                           }
                         text.innerHTML = this.value;
                         this.value = "";
@@ -405,13 +396,11 @@ document.addEventListener("DOMContentLoaded", function() {
                                if(done.classList.contains('toogle')) {
                                 done.style.marginTop = 15 + "px"; }
                                else done.style.marginTop = 13 + "px";
-                              //  it.style.height = 58 + "px";
                               }
                                else{
                                  if(done.classList.contains('toogle')) {
                                   done.style.marginTop = 15 + 15*quere + "px"; }
                                  else done.style.marginTop = 13 + 13*quere + "px";
-                          //    it.style.height = 58 + 29*quere + "px";
                             }
                 				  text.innerHTML = input.value;
                 					input.value = "";
