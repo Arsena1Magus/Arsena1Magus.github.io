@@ -125,7 +125,7 @@ li {
   display: block;
   position: absolute;
   width: 500px;
-  height: 54px;
+  height: auto;
   margin-left: 47px;
   margin-top: -58px;
   font-size: 24px;
