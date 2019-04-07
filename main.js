@@ -56,7 +56,8 @@ document.addEventListener("DOMContentLoaded", function() {
             done = document.createElement('div'),
             text = document.createElement('label'),
             remove = document.createElement('div');
-          var  br = document.createElement("br");
+        var length = el.todoContent.length;
+        var quere = Math.floor(length/30);
         footer.classList.add('footer');
         done.classList.add('toggle');
         remove.classList.add('app__list-remove');
@@ -67,6 +68,17 @@ document.addEventListener("DOMContentLoaded", function() {
         done.addEventListener('click', function() {
             done.classList.toggle('toggle');
             done.classList.toggle('toggle--done');
+            if (quere == 0){
+              if(done.classList.contains('toogle')) {
+               done.style.marginTop = 15 + "px"; }
+               else done.style.marginTop = 13 + "px";
+             }
+              else
+              {
+                if(done.classList.contains('toogle')) {
+                 done.style.marginTop = 15 + 15*quere + "px"; }
+                else done.style.marginTop = 13 + 13*quere + "px";
+           }
             doneTodo(this);
         });
         switch (el.todoState) {
@@ -79,9 +91,6 @@ document.addEventListener("DOMContentLoaded", function() {
                 item.classList.add('app__list-item');
         }
         item.id = el.todoId;
-        var length = el.todoContent.length;
-        var quere = Math.floor(length/30);
-        var size = 0;
        if (quere == 0)
        {
          if(done.classList.contains('toogle')) {
