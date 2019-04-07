@@ -69,14 +69,14 @@ document.addEventListener("DOMContentLoaded", function() {
             done.classList.toggle('toggle');
             done.classList.toggle('toggle--done');
             if (quere == 0){
-              if(done.classList.contains('.toogle')== true) {
-               done.style.marginTop = 15 + "px"; }
+              if(done.classList.contains('.toogle')== true)
+               done.style.marginTop = 15 + "px";
                else done.style.marginTop = 13 + "px";
              }
               else
               {
-                if(done.classList.contains('.toogle')== true) {
-                 done.style.marginTop = 15 + 15*quere + "px"; }
+                if(done.classList.contains('.toogle')== true)
+                 done.style.marginTop = 15 + 15*quere + "px"; 
                 else done.style.marginTop = 13 + 13*quere + "px";
            }
             doneTodo(this);
