@@ -84,14 +84,18 @@ document.addEventListener("DOMContentLoaded", function() {
         var size = 0;
        if (quere == 0)
        {
+         if(done.classList.contains('.toogle'))
           done.style.marginTop = 15 + "px";
+          else done.style.marginTop = 13 + "px";
           item.style.height = 58 + "px";
           text.innerHTML = el.todoContent;
         }
          else
          {
-        done.style.marginTop = 15 + 15*quere + "px";
-        item.style.height = 58 + 29*quere + "px";
+           if(done.classList.contains('.toogle'))
+            done.style.marginTop = 15 + 15*quere + "px";
+           else done.style.marginTop = 13 + "px";
+           item.style.height = 58 + 29*quere + "px";
       }
         text.innerHTML = el.todoContent;
         item.appendChild(done);
