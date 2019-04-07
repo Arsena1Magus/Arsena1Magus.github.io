@@ -77,8 +77,8 @@ document.addEventListener("DOMContentLoaded", function() {
               else
               {
                 if(done.classList.contains('toggle')== true)
-                 done.style.marginTop = 15 + 15*quere + "px";
-                else done.style.marginTop = 13 + 13*quere + "px";
+                 done.style.marginTop = 15 + 10*quere + "px";
+                else done.style.marginTop = 13 + 10*quere + "px";
            }
             doneTodo(this);
         });
@@ -102,8 +102,8 @@ document.addEventListener("DOMContentLoaded", function() {
          else
          {
            if(done.classList.contains('toggle')== true) {
-            done.style.marginTop = 15 + 15*quere + "px"; }
-           else done.style.marginTop = 13 + 13*quere + "px";
+            done.style.marginTop = 15 + 10*quere + "px"; }
+           else done.style.marginTop = 13 + 10*quere + "px";
       }
         text.innerHTML = el.todoContent;
         item.appendChild(done);
@@ -359,8 +359,8 @@ document.addEventListener("DOMContentLoaded", function() {
                              else
                              {
                                if(done.classList.contains('toggle')== true) {
-                                done.style.marginTop = 15 + 15*quere + "px"; }
-                               else done.style.marginTop = 13 + 13*quere + "px";
+                                done.style.marginTop = 15 + 10*quere + "px"; }
+                               else done.style.marginTop = 13 + 10*quere + "px";
                           }
                         text.innerHTML = this.value;
                         this.value = "";
@@ -405,8 +405,8 @@ document.addEventListener("DOMContentLoaded", function() {
                               }
                                else{
                                  if(done.classList.contains('toggle')== true) {
-                                  done.style.marginTop = 15 + 15*quere + "px"; }
-                                 else done.style.marginTop = 13 + 13*quere + "px";
+                                  done.style.marginTop = 15 + 10*quere + "px"; }
+                                 else done.style.marginTop = 13 + 10*quere + "px";
                             }
                 				  text.innerHTML = input.value;
                 					input.value = "";
