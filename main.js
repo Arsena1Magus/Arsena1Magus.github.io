@@ -69,13 +69,13 @@ document.addEventListener("DOMContentLoaded", function() {
             done.classList.toggle('toggle');
             done.classList.toggle('toggle--done');
             if (quere == 0){
-              if(done.classList.contains('toogle')) {
+              if(done.classList.contains("toogle") == true) {
                done.style.marginTop = 15 + "px"; }
                else done.style.marginTop = 13 + "px";
              }
               else
               {
-                if(done.classList.contains('toogle')) {
+                if(done.classList.contains("toogle") == true) {
                  done.style.marginTop = 15 + 15*quere + "px"; }
                 else done.style.marginTop = 13 + 13*quere + "px";
            }
@@ -93,14 +93,14 @@ document.addEventListener("DOMContentLoaded", function() {
         item.id = el.todoId;
        if (quere == 0)
        {
-         if(done.classList.contains('toogle')) {
+         if(done.classList.contains("toogle") == true) {
           done.style.marginTop = 15 + "px"; }
           else done.style.marginTop = 13 + "px";
           text.innerHTML = el.todoContent;
         }
          else
          {
-           if(done.classList.contains('toogle')) {
+           if(done.classList.contains("toogle") == true) {
             done.style.marginTop = 15 + 15*quere + "px"; }
            else done.style.marginTop = 13 + 13*quere + "px";
       }
@@ -346,13 +346,13 @@ document.addEventListener("DOMContentLoaded", function() {
                            var quere = Math.floor(length/30), size = 0;
                            if (quere == 0)
                            {
-                             if(done.classList.contains('toogle')) {
+                             if(done.classList.contains("toogle") == true) {
                               done.style.marginTop = 15 + "px"; }
                              else done.style.marginTop = 13 + "px";
                             }
                              else
                              {
-                               if(done.classList.contains('toogle')) {
+                               if(done.classList.contains("toogle") == true) {
                                 done.style.marginTop = 15 + 15*quere + "px"; }
                                else done.style.marginTop = 13 + 13*quere + "px";
                           }
@@ -393,12 +393,12 @@ document.addEventListener("DOMContentLoaded", function() {
                               var length = input.value.length;
                               var quere = Math.floor(length/30);
                              if (quere == 0){
-                               if(done.classList.contains('toogle')) {
+                               if(done.classList.contains('toogle') == true) {
                                 done.style.marginTop = 15 + "px"; }
                                else done.style.marginTop = 13 + "px";
                               }
                                else{
-                                 if(done.classList.contains('toogle')) {
+                                 if(done.classList.contains('toogle') == true) {
                                   done.style.marginTop = 15 + 15*quere + "px"; }
                                  else done.style.marginTop = 13 + 13*quere + "px";
                             }
