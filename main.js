@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
          else
          {
-        done.style.marginTop = 15.5 + 15*quere + "px";
+        done.style.marginTop = 15 + 15*quere + "px";
         item.style.height = 58 + 29*quere + "px";
       }
         text.innerHTML = el.todoContent;
