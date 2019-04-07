@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
               else
               {
                 if(done.classList.contains('.toogle')== true)
-                 done.style.marginTop = 15 + 15*quere + "px"; 
+                 done.style.marginTop = 15 + 15*quere + "px";
                 else done.style.marginTop = 13 + 13*quere + "px";
            }
             doneTodo(this);
@@ -330,11 +330,11 @@ document.addEventListener("DOMContentLoaded", function() {
           }
           else if (quere == 1) {
             item_input.style.height = 27 + 50*quere + "px";
-            item_input.style.marginTop = -58 - quere * 23 + "px";
+            item_input.style.marginTop = -58 - quere*20 + "px";
           }
             else {
             item_input.style.height = 54 + 20*quere + "px";
-            item_input.style.marginTop = -54 - quere * 27 + "px";
+            item_input.style.marginTop = -54 - quere * 23 + "px";
           }
           item_input.value = text.innerHTML;
             input.addEventListener('keydown', function(e) {
