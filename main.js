@@ -101,6 +101,7 @@ document.addEventListener("DOMContentLoaded", function() {
         footer.style.display = "block";
         currentTodos();
         display_clear();
+        update_list();
     }
 
     function doneTodo(el) {
